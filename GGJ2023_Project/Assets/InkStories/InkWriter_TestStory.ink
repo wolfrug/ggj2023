@@ -1,4 +1,7 @@
 VAR trackableVariable = 0
+LIST AllItems = Test, Test2, BaseItem
+LIST TestInventory = Test, Test2, BaseItem
+
 
 ===function IsInteractable(b)
 {b:
@@ -9,6 +12,7 @@ INTERACTABLE(false)
 
 
 ==start
+~TestInventory+=TestInventory.Test2
 PLAYER(left, nohat) This is on the left, also I have a portrait sans hat.
 
 PLAYER(right, hat) And this is on the right. I have a hat portrait.
@@ -16,14 +20,20 @@ PLAYER(right, hat) And this is on the right. I have a hat portrait.
 ~trackableVariable++
 This is probably also on the right. Also I just increased a variable +1! It is now {trackableVariable}!
 
+INV_SET(TestInventory) (Setting test inventory?)
+
 PLAYER(left, hat) Then this is on the left again. I added a hat.
 
 +(option1) [This is an option that is always here.]
 PLAYER(left, nohat) Great. Hat off!
+~TestInventory-=TestInventory.Test2
+INV_SET(TestInventory) Updating inventory again...
 
 PLAYER(right, nohat) Good idea!
 
 +(option2) [{IsInteractable(RANDOM(0,1)>0)}This is an option that is sometimes disabled.]
+~TestInventory+=TestInventory.Test
+INV_SET(TestInventory) Updating inventory again...
 PLAYER(left, nohat) Lucky us. Off with the hat.
 
 PLAYER(right, nohat) Yass.

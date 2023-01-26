@@ -74,6 +74,7 @@ namespace InkEngine {
 
     public class InkStoryStateManager : MonoBehaviour {
         public InkStoryData m_storyObject;
+        public static InkStoryData m_staticStoryObject;
         public InkStoryVariableData m_defaultTextVariables; // a scriptable object with the default ones, for quick lookup
         public List<InkTextVariable> m_searchableTextVariables = new List<InkTextVariable> { }; // which text variables we are searching for & parsing
         public bool m_startOnInit = true;
@@ -93,6 +94,7 @@ namespace InkEngine {
         }
         public void InitStory () { // Init -or- load
             m_storyObject.InitStory ();
+            m_staticStoryObject = m_storyObject;
         }
         public bool SavedStory {
             get {
