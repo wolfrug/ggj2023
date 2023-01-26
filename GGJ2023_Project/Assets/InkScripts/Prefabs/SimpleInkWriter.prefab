@@ -63,10 +63,34 @@ MonoBehaviour:
       m_Calls: []
   m_dialogueShownEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1252226037}
+        m_TargetAssemblyTypeName: ScrollRectAutoScroller, Assembly-CSharp
+        m_MethodName: ScrollDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_choicesShownEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1252226037}
+        m_TargetAssemblyTypeName: ScrollRectAutoScroller, Assembly-CSharp
+        m_MethodName: ScrollDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_writerFinishedEvent:
     m_PersistentCalls:
       m_Calls:
@@ -181,6 +205,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3254785038571937101, guid: 419f133bcb016184ebeced2dd8d8e45a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000038146973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254785038571937101, guid: 419f133bcb016184ebeced2dd8d8e45a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000049591064
+      objectReference: {fileID: 0}
     - target: {fileID: 6618238374765881647, guid: 419f133bcb016184ebeced2dd8d8e45a, type: 3}
       propertyPath: m_Name
       value: DialogBox
@@ -231,17 +263,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 419f133bcb016184ebeced2dd8d8e45a, type: 3}
---- !u!114 &5273698111673760558 stripped
+--- !u!114 &3049190520753556636 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5644214699229543653, guid: 419f133bcb016184ebeced2dd8d8e45a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3254785036543200087, guid: 419f133bcb016184ebeced2dd8d8e45a, type: 3}
   m_PrefabInstance: {fileID: 539225930907453387}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5273698111673760558 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5644214699229543653, guid: 419f133bcb016184ebeced2dd8d8e45a, type: 3}
+  m_PrefabInstance: {fileID: 539225930907453387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675183042177036004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6565e28da7789a6419c20ae529fa94d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6675183042177036004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6618238374765881647, guid: 419f133bcb016184ebeced2dd8d8e45a, type: 3}
+  m_PrefabInstance: {fileID: 539225930907453387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1252226037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675183042177036004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a77638adbb91444b0bccae36a830eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_targetRect: {fileID: 3049190520753556636}
 --- !u!4 &8165631858082467973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8514496866400163662, guid: 419f133bcb016184ebeced2dd8d8e45a, type: 3}
