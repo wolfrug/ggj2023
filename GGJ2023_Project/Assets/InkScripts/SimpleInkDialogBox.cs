@@ -57,6 +57,16 @@ public class SimpleInkDialogBox : MonoBehaviour {
 
     public GameObject SpawnTextObject (string text) {
         GameObject inkTextObject = Instantiate (m_textBoxPrefab, m_textParent);
+
+        // Special stuff for the special tags
+        TypeWriter writer = inkTextObject.GetComponent<TypeWriter> ();
+        if (writer != null) {
+            if (writer.useFade_) {
+                if (text[0] == '<') {
+                    writer.useFade_ = false;
+                }
+            }
+        }
         inkTextObject.GetComponentInChildren<TextMeshProUGUI> ().SetText (text);
         LayoutRebuilder.ForceRebuildLayoutImmediate (m_textParent.GetComponent<RectTransform> ());
         return inkTextObject;

@@ -16,5 +16,5 @@ MonoBehaviour:
   m_displayName: Test Item
   m_image: {fileID: 21300000, guid: 68e5a78013e33f247822a837e55b0ab4, type: 3}
   m_description: Another test item
-  m_maxStack: 1
+  m_maxStack: 3
   m_prefab: {fileID: 3485106938093570340, guid: 9a40f6a39f5adda40b36174627e6b657, type: 3}

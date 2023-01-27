@@ -18,6 +18,7 @@ public class InkInventoryData : ScriptableObject {
         // First we do this the easy way
         if (m_contents.Count < m_maxSize && !HasItem (newItem)) { // we don't add duplicates
             m_contents.Add (newItem);
+            newItem.UpdateStackFromInk ();
             return 1;
         }
         return 0;
@@ -66,12 +67,7 @@ public class InkInventoryData : ScriptableObject {
             var newList = InkEngine.InkStoryStateManager.m_staticStoryObject.m_inkStory.variablesState[m_id] as Ink.Runtime.InkList;
             ClearInventory ();
             foreach (var item in newList) {
-                //Debug.Log ("Item " + item + " in Ink list!");
-                if (HasItem (item.Key.itemName)) {
-                    //Debug.Log ("Item with key " + item.Key.itemName + " found in inventory!");
-                } else {
-                    AddItem (item.Key.itemName);
-                }
+                AddItem (item.Key.itemName);
             }
         } else {
             Debug.LogWarning ("Cannot find loaded Ink Story");
@@ -83,6 +79,7 @@ public class InkInventoryData : ScriptableObject {
             var newList = new Ink.Runtime.InkList (m_id, InkEngine.InkStoryStateManager.m_staticStoryObject.m_inkStory);
             foreach (InkInventoryItemData item in m_contents) {
                 newList.AddItem (item.m_id);
+                item.UpdateStackToInk ();
             }
             InkEngine.InkStoryStateManager.m_staticStoryObject.m_inkStory.variablesState[m_id] = newList;
         } else {

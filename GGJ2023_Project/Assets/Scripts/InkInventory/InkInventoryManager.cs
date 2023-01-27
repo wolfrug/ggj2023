@@ -81,33 +81,4 @@ public class InkInventoryManager : MonoBehaviour {
     bool HasInventory (string id) {
         return m_spawnedInventories.Find ((x) => x.m_id == id) != null;
     }
-
-    [NaughtyAttributes.Button]
-    void TestMakeInventory () {
-        InkInventoryData newInventory = Instantiate (m_baseInventoryData);
-        InkInventoryItemData newItem = Instantiate (m_baseItemData);
-        newInventory.m_contents.Add (newItem);
-        m_spawnedInventories.Add (newInventory);
-    }
-
-    [NaughtyAttributes.Button]
-    void TestAssignInventory () {
-        SimpleInkInventory targetInventory = FindObjectOfType<SimpleInkInventory> ();
-        targetInventory.UpdateInventory (m_spawnedInventories[0]);
-    }
-
-    [NaughtyAttributes.Button]
-    void TestUpdateFromInk () {
-        InkInventoryData newInventory = Instantiate (m_baseInventoryData);
-        newInventory.UpdateFromInk ();
-        SimpleInkInventory targetInventory = FindObjectOfType<SimpleInkInventory> ();
-        targetInventory.UpdateInventory (newInventory);
-    }
-
-    [NaughtyAttributes.Button]
-    void TestUpdateToInk () {
-        InkInventoryData newData = CreateNewInventory ("TestInventory");
-        newData.AddItem ("Test2");
-        newData.UpdateToInk ();
-    }
 }

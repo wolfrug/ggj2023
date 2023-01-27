@@ -1,6 +1,81 @@
 VAR trackableVariable = 0
-LIST AllItems = Test, Test2, BaseItem
-LIST TestInventory = Test, Test2, BaseItem
+LIST MainInventory = Test, Test2, BaseItem
+VAR Test_stack = 0
+
+
+===function UpdateInventory()
+// We'll probably only have one so...
+INV_SET(MainInventory)
+
+===function alterStack(ref var, amount, maxStack)
+// Clean-up function
+// returns actual value change
+~temp previousVal = var
+~temp returnVal = amount
+~var+=amount
+// Clamping max
+{var>maxStack:
+~var = maxStack
+~returnVal = maxStack-previousVal
+}
+// Clamping min
+{var<0:
+~var = 0
+~returnVal = previousVal
+}
+~return returnVal
+
+===function alterItemStack(variable, amount)
+// Use this to alter items with stacks - variable should be the -inventory- variable
+~temp removeItem = false
+~temp removeFromStack = false
+~temp addItem = false
+~temp displayName = variable
+~temp result = amount
+~temp stackableVar = false
+{variable:
+- Test:
+~displayName = "Test 1"
+~result = alterStack(Test_stack, amount, 3)
+{Test_stack<=0 && result<0:
+~removeItem = true
+}
+~stackableVar = true
+- Test2:
+// has no stack
+~displayName = "Test 2"
+- BaseItem:
+// has no stack
+~displayName = "Base Item"
+}
+// stackable variables do this
+{stackableVar:
+{result>0:
+~addItem = true
+}
+{result<0:
+~removeFromStack = true
+}
+- else:
+// non-stackable variables do this
+{amount<0 && MainInventory?variable:
+~removeItem = true
+}
+}
+// If it's > 0 and the inventory does not have it, add it here
+{not (MainInventory?variable) && amount > 0:
+~MainInventory+=variable
+~addItem = true
+}
+{removeItem:
+~MainInventory-=variable
+}
+{result<0:
+~result = result * -1
+}
+{addItem || removeItem || removeFromStack:
+{UpdateInventory()} <color=yellow>{removeItem||removeFromStack: Removed {result} {displayName}!}{addItem: Added {result} {displayName}!}</color>
+}
 
 
 ===function IsInteractable(b)
@@ -12,34 +87,25 @@ INTERACTABLE(false)
 
 
 ==start
-~TestInventory+=TestInventory.Test2
-PLAYER(left, nohat) This is on the left, also I have a portrait sans hat.
+What do you want to do?
 
-PLAYER(right, hat) And this is on the right. I have a hat portrait.
++ [Add one test item 1]
+{alterItemStack(Test, 1)}
+Done.
+->start
++ [Remove one test item 1]
+{alterItemStack(Test, -1)}
+Done.
+->start
++ [Add one test item 2]
+{alterItemStack(Test2, 1)}
+Done.
+->start
++ [Remove one test item 2]
+{alterItemStack(Test2, -1)}
+Done.
+->start
 
-~trackableVariable++
-This is probably also on the right. Also I just increased a variable +1! It is now {trackableVariable}!
-
-INV_SET(TestInventory) (Setting test inventory?)
-
-PLAYER(left, hat) Then this is on the left again. I added a hat.
-
-+(option1) [This is an option that is always here.]
-PLAYER(left, nohat) Great. Hat off!
-~TestInventory-=TestInventory.Test2
-INV_SET(TestInventory) Updating inventory again...
-
-PLAYER(right, nohat) Good idea!
-
-+(option2) [{IsInteractable(RANDOM(0,1)>0)}This is an option that is sometimes disabled.]
-~TestInventory+=TestInventory.Test
-INV_SET(TestInventory) Updating inventory again...
-PLAYER(left, nohat) Lucky us. Off with the hat.
-
-PLAYER(right, nohat) Yass.
-
-- 
-->end
 ==end
 The end!
 ->END
@@ -48,8 +114,6 @@ The end!
 Hi there. This is set in the other scene, just to show how easily variables and things carry over.
 
 In the previous scene, we increased trackableVariable to {trackableVariable}. Nice.
-
-In the previous scene, we picked option 1 {start.option1} times and option 2 {start.option2} times. Neat!
 
 Welp, that was that. Let's load the other scene back.
 
