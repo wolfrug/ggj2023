@@ -1,4 +1,3 @@
-VAR trackableVariable = 0
 LIST MainInventory = Test, Test2, BaseItem
 VAR Test_stack = 0
 
@@ -84,62 +83,3 @@ INTERACTABLE(true)
 -else:
 INTERACTABLE(false)
 }
-
-
-==start
-What do you want to do?
-
-+ [Add one test item 1]
-{alterItemStack(Test, 1)}
-Done.
-->start
-+ [Remove one test item 1]
-{alterItemStack(Test, -1)}
-Done.
-->start
-+ [Add one test item 2]
-{alterItemStack(Test2, 1)}
-Done.
-->start
-+ [Remove one test item 2]
-{alterItemStack(Test2, -1)}
-Done.
-->start
-
-==end
-The end!
-->END
-
-==continue
-Hi there. This is set in the other scene, just to show how easily variables and things carry over.
-
-In the previous scene, we increased trackableVariable to {trackableVariable}. Nice.
-
-Welp, that was that. Let's load the other scene back.
-
-+ [Load me back, Scotty! LOAD_SCENE(SampleScene)]
-[This text won't be visible.]
-+ [Don't load me back.]
-Okely, fine by me.
-- 
-->END
-
-==exampleStringTable
-PLAYER_BARK() This is a player bark.
-
-OTHER_BARK() Example of another bark.
-
-PLAYER_BARK() More player bark.
-
-PLAYER_BARK() Even more player bark.
-
-OTHER_BARK() And other bark.
-
-PLAYER_BARK(good) This is an example of a bark with an argument (good).
-
-PLAYER_BARK(good) Which could for example be used as a unit.
-
-PLAYER_BARK(bad) Another example of an argument bark with the argument bad.
-
-PLAYER_BARK(bad) These will also show up though in the generic list of player barks.
-->END

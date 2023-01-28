@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: InkStoryObject
   m_EditorClassIdentifier: 
   m_ID: default
-  m_inkJsonAsset: {fileID: 4900000, guid: 92bab6750444ee94b986a2eb8472a27d, type: 3}
+  m_inkJsonAsset: {fileID: 4900000, guid: 5f024a89d7be45148a361ba6488610ba, type: 3}
