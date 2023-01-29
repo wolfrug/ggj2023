@@ -49,7 +49,6 @@ namespace InkEngine {
 
         void CheckChoices (List < (InkChoiceLine, Button) > args) {
             // Check if any of the button choicelines have our arguments
-            bool buttonFound = false;
             foreach ((InkChoiceLine, Button) button in args) {
                 CustomInkChoiceButton foundButton = HasFunctionEvent (button.Item1.choiceText);
                 // We found a button, yay!

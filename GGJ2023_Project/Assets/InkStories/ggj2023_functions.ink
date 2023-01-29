@@ -77,9 +77,14 @@ INV_SET(MainInventory)
 }
 
 
-===function IsInteractable(b)
+===function IsInteractable(b) // again, in case we change things or wt
 {b:
 INTERACTABLE(true)
 -else:
 INTERACTABLE(false)
 }
+===function UseButton(b) // just in case we change things or whatever
+LOCATION({b})
+
+===function Move(to)
+MOVE({to})

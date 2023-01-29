@@ -14,6 +14,7 @@ public class SimpleInkDialogBox : MonoBehaviour {
     public GameObject m_optionBoxPrefab;
     public Button m_continueButton;
     public Button m_skipButton; // put this -above- the continue button ;)
+    public Image m_dialogImage;
     public bool m_canContinue;
     // Start is called before the first frame update
     void Start () {
@@ -22,6 +23,9 @@ public class SimpleInkDialogBox : MonoBehaviour {
         } else {
             m_canContinue = true;
         }
+        if (m_dialogImage != null) {
+            SetDialogImage (m_dialogImage.sprite);
+        };
     }
 
     public bool Active {
@@ -86,6 +90,19 @@ public class SimpleInkDialogBox : MonoBehaviour {
         GameObject inkObject = Instantiate (prefab, m_optionsParent);
         LayoutRebuilder.ForceRebuildLayoutImmediate (m_optionsParent.GetComponent<RectTransform> ());
         return inkObject;
+    }
+
+    public void SetDialogImage (Sprite newImage) {
+        if (newImage != null) {
+            if (m_dialogImage != null) {
+                m_dialogImage.sprite = newImage;
+                m_dialogImage.gameObject.SetActive (true);
+            }
+        } else {
+            if (m_dialogImage != null) {
+                m_dialogImage.gameObject.SetActive (false);
+            }
+        }
     }
     public void ClearAllText () {
         foreach (Transform child in m_textParent) {

@@ -5,21 +5,21 @@ INCLUDE ggj2023_memories.ink
 ==start
 What do you want to do?
 
-+ [LOCATION(test)Add one test item 1]
++ [{UseButton("test")}Add one test item 1]
 {alterItemStack(Test, 1)}
 Done.
 ->start
-+ [Remove one test item 1]
++ [{Move("one")}Remove one test item 1]
 {alterItemStack(Test, -1)}
-Done.
+Done. #image.one
 ->start
-+ [Add one test item 2]
++ [{Move("two")}Add one test item 2]
 {alterItemStack(Test2, 1)}
-Done.
+Done. #image.two
 ->start
 + [Remove one test item 2]
 {alterItemStack(Test2, -1)}
-Done.
+Done. 
 ->start
 
 ==end
