@@ -87,6 +87,7 @@ namespace InkEngine {
         // Where most of the magic happens: takes the line of dialogue + possible expected choices, displays them one by one by spawning text objects
         // And then displayes the options by spawning buttons
         IEnumerator DisplayText (InkDialogueLine[] dialogueLines, List<InkChoiceLine> gatherChoices) {
+
             if (m_currentDialogBox.HasContinueButton) {
                 m_currentDialogBox.SetContinueButtonActive (true);
                 m_currentDialogBox.m_canContinue = false;
@@ -167,6 +168,15 @@ namespace InkEngine {
             }
             if (tags.Contains ("showDialogue")) {
                 OpenCurrentDialogBox (false);
+            }
+            if (tags.Contains ("continue")) {
+                m_currentDialogBox.m_canContinue = true;
+            }
+            if (tags.Contains ("clearText")) {
+                m_currentDialogBox.ClearAllText ();
+            }
+            if (tags.Contains ("clearOptions")) { // might be a bit dangerous, depending on
+                m_currentDialogBox.ClearAllOptions ();
             }
             foreach (string tag in tags) {
                 if (tag.Contains ("wait.")) {

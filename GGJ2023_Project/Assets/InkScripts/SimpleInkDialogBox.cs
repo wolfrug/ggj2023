@@ -60,14 +60,17 @@ public class SimpleInkDialogBox : MonoBehaviour {
     }
 
     public GameObject SpawnTextObject (string text) {
+        if (text.Length < 1) { return null; } // we don't spawn empties
         GameObject inkTextObject = Instantiate (m_textBoxPrefab, m_textParent);
 
         // Special stuff for the special tags
         TypeWriter writer = inkTextObject.GetComponent<TypeWriter> ();
         if (writer != null) {
             if (writer.useFade_) {
-                if (text[0] == '<') {
-                    writer.useFade_ = false;
+                if (text.Length > 0) {
+                    if (text[0] == '<') {
+                        writer.useFade_ = false;
+                    }
                 }
             }
         }
@@ -106,12 +109,14 @@ public class SimpleInkDialogBox : MonoBehaviour {
     }
     public void ClearAllText () {
         foreach (Transform child in m_textParent) {
-            Destroy (child.gameObject);
+            child.gameObject.SetActive (false);
+            Destroy (child.gameObject, 1f);
         }
     }
     public void ClearAllOptions () {
         foreach (Transform child in m_optionsParent) {
-            Destroy (child.gameObject);
+            child.gameObject.SetActive (false);
+            Destroy (child.gameObject, 1f);
         }
     }
 

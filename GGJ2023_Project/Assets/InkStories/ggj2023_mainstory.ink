@@ -1,19 +1,92 @@
 INCLUDE ggj2023_functions.ink
 INCLUDE ggj2023_memories.ink
 
-
+VAR currentKnot = ->start
 ==start
-What do you want to do?
+Testing movement systems.
+~currentKnot = ->1_0
+->currentKnot
 
-+ [{UseButton("test")}Add one test item 1]
+==1_0
+This is the start, from here you can go to one, two or three.
+
++ [{UseButton("1.1")}{Move("1.1")}Go to 1.1.]
+->1_1
++ [{UseButton("1.2")}{Move("1.2")}Go to 1.2.]
+->1_2
++ [{UseButton("1.3")}{Move("1.3")}Go to 1.3.]
+->1_3
+
+=1_1
+You arrived at 1.1. From here you can go to 1.2, 2.1 or 2.2. #clearText
+
++ [{UseButton("1.2")}{Move("1.2")}Go to 1.2.]
+->1_2
++ [{UseButton("2.1")}{Move("2.1")}Go to 2.1.]
+->2_0.2_1
++ [{UseButton("2.2")}{Move("2.2")}Go to 2.2.]
+->2_0.2_2
+
+=1_2
+You arrived at 1.2. From here you can go to 1.1, 1.3, 2.1, 2.2 or 2.3. #clearText
+
++ [{UseButton("1.1")}{Move("1.1")}Go to 1.1.]
+->1_2
++ [{UseButton("1.3")}{Move("1.3")}Go to 1.3.]
+->1_3
++ [{UseButton("2.1")}{Move("2.1")}Go to 2.1.]
+->2_0.2_1
++ [{UseButton("2.2")}{Move("2.2")}Go to 2.2.]
+->2_0.2_2
++ [{UseButton("2.2")}{Move("2.2")}Go to 2.3.]
+->2_0.2_3
+=1_3
+You arrived at 1.3. From here you can go to 1.2, 2.2 or 2.3. #clearText
+
++ [{UseButton("1.2")}{Move("1.2")}Go to 1.2.]
+->1_2
++ [{UseButton("2.2")}{Move("2.2")}Go to 2.2.]
+->2_0.2_1
++ [{UseButton("2.3")}{Move("2.3")}Go to 2.3.]
+->2_0.2_2
+
+==2_0
+This doesn't really exist.
+->2_2
+=2_1
+You got to 2.1. So far you can only go to 3_0. #clearText
+
++ [{UseButton("3.0")}{Move("3.0")}Go to 3.0.]
+->3_0
+=2_2
+You got to 2.2. So far you can only go to 3_0. #clearText
+
++ [{UseButton("3.0")}{Move("3.0")}Go to 3.0.]
+->3_0
+=2_3
+You got to 2.3. So far you can only go to 3_0. #clearText
+
++ [{UseButton("3.0")}{Move("3.0")}Go to 3.0.]
+->3_0
+
+==3_0
+The end, for now. #clearText
+
++ [Finish]
+#continue
+->END
+
+
+==testItemAdding
++ [Add one test item 1]
 {alterItemStack(Test, 1)}
 Done.
 ->start
-+ [{Move("one")}Remove one test item 1]
++ [Remove one test item 1]
 {alterItemStack(Test, -1)}
 Done. #image.one
 ->start
-+ [{Move("two")}Add one test item 2]
++ [Add one test item 2]
 {alterItemStack(Test2, 1)}
 Done. #image.two
 ->start

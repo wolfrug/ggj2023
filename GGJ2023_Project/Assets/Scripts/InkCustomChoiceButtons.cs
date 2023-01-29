@@ -16,6 +16,8 @@ namespace InkEngine {
         public SimpleInkWriter m_targetWriter; // writer that is used to play any preceding text lines & that we watch for appropriate gather choices
         public CustomInkChoiceButton[] m_customButtons;
 
+        public bool m_hideWriterIfFound = true; // hides the dialog box if a custom button is found, e.g. because it's on a map or something
+
         private Dictionary<string, List<CustomInkChoiceButton>> m_inkFunctionDict = new Dictionary<string, List<CustomInkChoiceButton>> { };
 
         void Awake () {
@@ -66,6 +68,10 @@ namespace InkEngine {
                     SetButtonInteractable (foundButton, button.Item2.interactable);
                     // And change the displayed text, in a rather ugly way
                     foundButton.assignableButton.gameObject.GetComponentInChildren<TextMeshProUGUI> ().SetText (button.Item1.choiceText.displayText);
+                    // Also hide the dialog box, if bool'd
+                    if (m_hideWriterIfFound) {
+                        m_targetWriter.CloseCurrentDialogBox (false);
+                    }
                 };
             }
         }
