@@ -3,9 +3,35 @@ INCLUDE ggj2023_memories.ink
 
 VAR currentKnot = ->start
 ==start
-Testing movement systems.
+Testing runestone
+->testRunestone
+
 ~currentKnot = ->1_0
 ->currentKnot
+
+==testRunestone
+The runestone has the text:
+
+SHOW_RUNESTONE(true)This is a lot of text.<br> <br><>
+
+On multiple lines.<br> <br><>
+
+That will be turned into weird runetext.<br> <br><>
+
+So we can't have too much.
+
++ [Erase the text.]
+The text disappears. #eraseRunes
+
+++ [SHOW_RUNESTONE(false) Destroy the runestone.]
+That's it, we're done.
+
+- Carrying on with our lives.
+
++[Try again?]
+->testRunestone
+
+
 
 ==1_0
 This is the start, from here you can go to one, two or three.

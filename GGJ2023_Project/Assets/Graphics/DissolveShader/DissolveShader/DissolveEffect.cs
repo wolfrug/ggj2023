@@ -22,16 +22,25 @@ THE SOFTWARE.
 
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class DissolveEvent : UnityEvent<DissolveEffect> { }
 
 public class DissolveEffect : MonoBehaviour {
 	private float _value = 1.0f;
 	private bool _isRunning = false;
 	private Material _dissolveMaterial = null;
 	public float timeScale = 1.0f;
+	public bool m_reverseDissolve = false; // Dissolves from 0 - 1
+	public BoxCollider m_randomColliderBox;
 
-	void Start () {
-		float maxVal = 0.0f;
+	public DissolveEvent m_onDissolveStarted;
+	public DissolveEvent m_onDissolveEnded;
+
+	void Awake () {
 		_dissolveMaterial = GetComponent<Renderer> ().material;
+		/*float maxVal = 0.0f;
 		var verts = GetComponent<MeshFilter> ().mesh.vertices;
 		for (int i = 0; i < verts.Length; i++) {
 			var v1 = verts[i];
@@ -40,32 +49,74 @@ public class DissolveEffect : MonoBehaviour {
 				var v2 = verts[j];
 				float mag = (v1 - v2).magnitude;
 				if (mag > maxVal) maxVal = mag;
-
 			}
 		}
 
 		_dissolveMaterial.SetFloat ("_LargestVal", maxVal * 0.5f);
+		*/
+		Reset ();
 	}
 
+	[NaughtyAttributes.Button]
 	public void Reset () {
-		_value = 1.0f;
+		if (m_reverseDissolve) {
+			_value = 0f;
+		} else {
+			_value = 1.0f;
+		}
 		_dissolveMaterial.SetFloat ("_DissolveValue", _value);
 	}
 
 	public void TriggerDissolve (Vector3 hitPoint) {
-		_value = 1.0f;
+		Reset ();
 		_dissolveMaterial.SetVector ("_HitPos", (new Vector4 (hitPoint.x, hitPoint.y, hitPoint.z, 1.0f)));
 		_isRunning = true;
+		m_onDissolveStarted.Invoke (this);
 	}
 
-	public void TriggerDissolveCentre () {
-		TriggerDissolve (Vector3.zero);
+	public void TriggerDissolveRandom () {
+		if (m_randomColliderBox != null) {
+			TriggerDissolve (GetRandomPointInsideCollider (m_randomColliderBox));
+		} else {
+			TriggerDissolve (Vector3.zero);
+		}
+	}
+	public void TriggerDissolveFromTop () {
+		if (m_randomColliderBox != null) {
+			TriggerDissolve (new Vector3 (0f, m_randomColliderBox.bounds.extents.y, 0f));
+		} else {
+			TriggerDissolve (Vector3.zero);
+		}
+	}
+
+	public void ManualDissolve (float value) {
+		_value = value;
+		_dissolveMaterial.SetFloat ("_DissolveValue", _value);
+	}
+
+	public Vector3 GetRandomPointInsideCollider (BoxCollider boxCollider) {
+		Vector3 extents = boxCollider.size / 2f;
+		Vector3 point = new Vector3 (
+			Random.Range (-extents.x, extents.x),
+			Random.Range (-extents.y, extents.y),
+			Random.Range (-extents.z, extents.z)
+		);
+
+		return boxCollider.transform.TransformPoint (point);
 	}
 
 	void Update () {
 		if (_isRunning && _dissolveMaterial != null) {
-			_value = Mathf.Max (0.0f, _value - Time.deltaTime * timeScale);
+			if (m_reverseDissolve) {
+				_value = Mathf.Min (1.0f, _value + Time.deltaTime * timeScale);
+			} else {
+				_value = Mathf.Max (0.0f, _value - Time.deltaTime * timeScale);
+			}
 			_dissolveMaterial.SetFloat ("_DissolveValue", _value);
+			if ((m_reverseDissolve && _value >= 1f) || (!m_reverseDissolve && _value <= 0f)) {
+				_isRunning = false;
+				m_onDissolveEnded.Invoke (this);
+			};
 		}
 
 	}

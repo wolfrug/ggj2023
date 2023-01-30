@@ -61,9 +61,9 @@ public class TypeWriter : MonoBehaviour {
     }
 
     public void WriteSimple (string text) {
-        Write (text, true, false);
+        Write (text, true);
     }
-    public void Write (string Text, bool clearText = true, bool showEncounterButton = true) {
+    public void Write (string Text, bool clearText = true) {
         // Remove own text if set
         string theText = Text;
         if (clearText) {
