@@ -12,13 +12,9 @@ Testing runestone
 ==testRunestone
 The runestone has the text:
 
-SHOW_RUNESTONE(true)This is a lot of text.<br> <br><>
-
-On multiple lines.<br> <br><>
-
-That will be turned into weird runetext.<br> <br><>
-
-So we can't have too much.
+SHOW_RUNESTONE(true)When the war between the Aesir and the jotnar ended, we were given to Asgard as hostages. Our father, Farbauti, king of the Jotnar, swore an oath; at least one of his sons should always remain in Asgard, and as long as we did, the peace would hold. Our mother, Laufey, came with us, and never saw her husband again.<br> <br><>
+They called us thurs. Trolls. Monsters from Jotunheim, not welcome in Asgard. Only the All-Father’s influence kept his sons from tearing us apart.<br> <br><>
+I was the eldest. Loki and Helblindi were my brothers. This is my saga.
 
 + [Erase the text.]
 The text disappears. #eraseRunes

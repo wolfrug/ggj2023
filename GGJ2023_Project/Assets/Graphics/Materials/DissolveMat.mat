@@ -46,7 +46,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DissolveValue: 1
+    - _DissolveValue: 0
     - _EnableExternalAlpha: 0
     - _GradientAdjust: 7.8
     - _LargestVal: 20
