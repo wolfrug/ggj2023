@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace InkEngine {
@@ -17,7 +18,8 @@ namespace InkEngine {
         public CustomInkChoiceButton[] m_customButtons;
 
         public bool m_hideWriterIfFound = true; // hides the dialog box if a custom button is found, e.g. because it's on a map or something
-
+        public bool m_hideOriginalIfFound = true; // hides the original button if reassigned to a custom button
+        public DialogueOptionsPresentedEvent m_onButtonFoundEvent;
         private Dictionary<string, List<CustomInkChoiceButton>> m_inkFunctionDict = new Dictionary<string, List<CustomInkChoiceButton>> { };
 
         void Awake () {
@@ -51,13 +53,17 @@ namespace InkEngine {
 
         void CheckChoices (List < (InkChoiceLine, Button) > args) {
             // Check if any of the button choicelines have our arguments
+            bool buttonFound = false;
             foreach ((InkChoiceLine, Button) button in args) {
                 CustomInkChoiceButton foundButton = HasFunctionEvent (button.Item1.choiceText);
                 // We found a button, yay!
                 if (foundButton != null) {
+                    buttonFound = true;
                     Debug.Log ("Found a button matching variable " + foundButton.targetButtonFunction.targetVariable + " and the button is " + foundButton.assignableButton);
                     // We disable the 'real' button first so it can't be clicked
-                    button.Item2.gameObject.SetActive (false);
+                    if (m_hideOriginalIfFound) {
+                        button.Item2.gameObject.SetActive (false);
+                    };
                     // We move the onclick to the new button
                     foundButton.assignableButton.onClick = button.Item2.onClick;
                     // We add a listener to -all- the other buttons, so we know if one has been clicked
@@ -68,11 +74,14 @@ namespace InkEngine {
                     SetButtonInteractable (foundButton, button.Item2.interactable);
                     // And change the displayed text, in a rather ugly way
                     foundButton.assignableButton.gameObject.GetComponentInChildren<TextMeshProUGUI> ().SetText (button.Item1.choiceText.displayText);
-                    // Also hide the dialog box, if bool'd
-                    if (m_hideWriterIfFound) {
-                        m_targetWriter.CloseCurrentDialogBox (false);
-                    }
                 };
+            }
+            if (buttonFound) {
+                m_onButtonFoundEvent.Invoke (args);
+                // Also hide the dialog box, if bool'd
+                if (m_hideWriterIfFound) {
+                    m_targetWriter.CloseCurrentDialogBox (false);
+                }
             }
         }
         void ClickedButton (CustomInkChoiceButton targetButton) {
@@ -82,22 +91,25 @@ namespace InkEngine {
 
         CustomInkChoiceButton HasFunctionEvent (InkDialogueLine dialogueLine) {
             if (dialogueLine.inkVariables.Count < 1) {
+                Debug.Log ("This choice line had no variables");
                 return null;
             }
             foreach (CustomInkChoiceButton btn in m_customButtons) {
                 string variableName = btn.targetButtonFunction.targetVariable;
                 List<CustomInkChoiceButton> functionEvents = new List<CustomInkChoiceButton> { };
                 m_inkFunctionDict.TryGetValue (variableName, out functionEvents);
+                Debug.Log ("Looking for hits for variable " + variableName);
                 if (functionEvents != null) {
                     if (functionEvents.Count > 0) {
                         foreach (CustomInkChoiceButton evt in functionEvents) {
-                            if (evt.targetButtonFunction.ArgumentMatch (dialogueLine.inkVariables[0].VariableArguments)) {
-                                evt.targetButtonFunction.onEvent.Invoke (dialogueLine, dialogueLine.inkVariables[0]);
-                                return evt;
+                            foreach (InkTextVariable textvar in dialogueLine.inkVariables) {
+                                if (evt.targetButtonFunction.ArgumentMatch (textvar.VariableArguments)) {
+                                    evt.targetButtonFunction.onEvent.Invoke (dialogueLine, textvar);
+                                    return evt;
+                                }
                             }
                         }
                     }
-
                 }
             }
             return null;

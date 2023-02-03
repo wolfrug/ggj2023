@@ -1,6 +1,6 @@
 LIST MainInventory = Test, Test2, BaseItem
 VAR Test_stack = 0
-
+VAR debug = true
 
 ===function UpdateInventory()
 // We'll probably only have one so...

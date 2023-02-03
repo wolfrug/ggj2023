@@ -15,6 +15,7 @@ public class SimpleInkDialogBox : MonoBehaviour {
     public Button m_continueButton;
     public Button m_skipButton; // put this -above- the continue button ;)
     public Image m_dialogImage;
+    public GameObject m_dialogImageGO;
     public bool m_canContinue;
     // Start is called before the first frame update
     void Start () {
@@ -99,12 +100,20 @@ public class SimpleInkDialogBox : MonoBehaviour {
         if (newImage != null) {
             if (m_dialogImage != null) {
                 m_dialogImage.sprite = newImage;
-                m_dialogImage.gameObject.SetActive (true);
+                DialogImageActive = true;
             }
         } else {
             if (m_dialogImage != null) {
-                m_dialogImage.gameObject.SetActive (false);
+                DialogImageActive = false;
             }
+        }
+    }
+    public bool DialogImageActive {
+        get {
+            return m_dialogImageGO.activeSelf;
+        }
+        set {
+            m_dialogImageGO.SetActive (value);
         }
     }
     public void ClearAllText () {

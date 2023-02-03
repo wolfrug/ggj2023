@@ -1489,6 +1489,7 @@ MonoBehaviour:
   m_continueButton: {fileID: 3254785037027219915}
   m_skipButton: {fileID: 3118475238025103787}
   m_dialogImage: {fileID: 2584985807800816777}
+  m_dialogImageGO: {fileID: 6262682585726589695}
   m_canContinue: 0
 --- !u!1001 &1284875027044717530
 PrefabInstance:
