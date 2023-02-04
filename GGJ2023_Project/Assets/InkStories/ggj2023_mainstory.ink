@@ -18,7 +18,6 @@ INCLUDE ggj2023_9_mimirs_well.ink
 ==start
 #image.none
 {alterAbility(Body, 2)}
-->testItemAdding
 {UpdateInventory()}
 {Move(currentLocation)}
 {debug:
@@ -29,6 +28,7 @@ INCLUDE ggj2023_9_mimirs_well.ink
 "Yeah, tell us." #image.sigyn
 "I can't see shit." #image.loki
 "Haha, wanna party?" #image.hel
+"Always, sister.", #image.fenrir
 "Nevermind." #image.none
 }
 ->currentLocationKnot

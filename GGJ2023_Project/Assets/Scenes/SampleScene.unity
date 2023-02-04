@@ -300,7 +300,7 @@ PrefabInstance:
       objectReference: {fileID: 558606851}
     - target: {fileID: 2372802269839543172, guid: ced0674d55074bb4286150bbdd8811b1, type: 3}
       propertyPath: m_tagEvents.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2372802269839543172, guid: ced0674d55074bb4286150bbdd8811b1, type: 3}
       propertyPath: m_functionEvents.Array.size
@@ -352,7 +352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2372802269839543172, guid: ced0674d55074bb4286150bbdd8811b1, type: 3}
       propertyPath: m_tagEvents.Array.data[11].targetTag
-      value: image.loki
+      value: image.fenrir
       objectReference: {fileID: 0}
     - target: {fileID: 2372802269839543172, guid: ced0674d55074bb4286150bbdd8811b1, type: 3}
       propertyPath: m_functionEvents.Array.data[0].targetVariable
@@ -985,7 +985,7 @@ PrefabInstance:
     - target: {fileID: 2372802269839543172, guid: ced0674d55074bb4286150bbdd8811b1, type: 3}
       propertyPath: m_tagEvents.Array.data[11].onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 21300000, guid: 0c6c51ef495e2bd46ba6420854d304f1, type: 3}
+      objectReference: {fileID: 21300000, guid: b7d50c6ec71ddaa4e86994ae0fe7be2e, type: 3}
     - target: {fileID: 2372802269839543172, guid: ced0674d55074bb4286150bbdd8811b1, type: 3}
       propertyPath: m_functionEvents.Array.data[0].onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
