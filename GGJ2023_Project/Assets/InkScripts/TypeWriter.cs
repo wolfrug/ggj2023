@@ -129,10 +129,12 @@ public class TypeWriter : MonoBehaviour {
                     writtenText += theText[i];
                     i++;
                 }
-                writtenText += theText[i];
-                // Punctuation!
-                if (IsPunctuation (theText[i])) {
-                    yield return new WaitForSeconds (punctuationPause);
+                if (i < stringLength) {
+                    writtenText += theText[i];
+                    // Punctuation!
+                    if (IsPunctuation (theText[i])) {
+                        yield return new WaitForSeconds (punctuationPause);
+                    }
                 }
                 self_.text = writtenText;
                 yield return new WaitForSeconds (1f / textSpeed_);
