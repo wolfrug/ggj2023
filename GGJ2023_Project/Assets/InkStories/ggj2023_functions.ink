@@ -90,20 +90,16 @@ INV_SET(AbilityInventory)
 ~temp removeItem = false
 ~temp removeFromStack = false
 ~temp addItem = false
-~temp displayName = variable
+~temp displayName = DisplayName(variable)
 ~temp result = amount
 ~temp stackableVar = false
 {variable:
 - Mead:
-~displayName = "Mead of Poetry"
 ~result = h_alterStack(Mead_stack, amount, 3)
 {Mead_stack<=0 && result<0:
 ~removeItem = true
 }
 ~stackableVar = true
-- Bracteate:
-// has no stack
-~displayName = "Bracteate"
 }
 // stackable variables do this
 {stackableVar:
@@ -157,12 +153,23 @@ INV_SET(AbilityInventory)
 ~return "Hamingja"
 - Follower:
 ~return "Fylgja"
+- Feather:
+~return "Feather from Fjaedrhamr"
+- Mead:
+~return "Mead of Poetry"
+- Laevateinn:
+~return "The Laevateinn"
+- Bracteate:
+~return "Bracteate"
 }
 ~return variable
 
 ===function RequireAbility(ability, minimum)
 ~temp hasEnough = GetStack(ability)>=minimum
 {hasEnough:<color=green>|<color=red>}{IsInteractable(hasEnough)}[{GetStack(ability)}/{minimum} {DisplayName(ability)}]</color>
+
+===function RequireItem(item)
+{MainInventory?item:<color=green>|<color=red>}{IsInteractable(MainInventory?item)}[Requires {DisplayName(item)}]</color>
 
 ===function AbilityCheck(ability, number)
 ~temp stack = GetStack(ability)

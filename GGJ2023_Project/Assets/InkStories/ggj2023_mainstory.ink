@@ -81,7 +81,7 @@ Done. #image.two
 {alterItem(Bracteate, -1)}
 Done. 
 ->testItemAdding
-+ [Test movement.]
++ [{RequireItem(Mead)} Test Check.]
 ->testStuff
 
 ==end
