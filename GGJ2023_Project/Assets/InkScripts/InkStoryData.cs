@@ -14,7 +14,7 @@ namespace InkEngine {
 
         public void SaveStory () {
             string json = m_inkStory.state.ToJson ();
-            PlayerPrefs.SetString ("InkWriter_ExampleSave", json);
+            PlayerPrefs.SetString (m_ID + "_saveGame", json);
         }
 
         public void InitStory () { // inits a story by either loading it or starting a new one
@@ -22,21 +22,22 @@ namespace InkEngine {
                 m_inkStory = new Story (m_inkJsonAsset.text);
             };
             if (SavedStory) { // We load if we can
-                string savedJson = PlayerPrefs.GetString ("InkWriter_ExampleSave");
+                string savedJson = PlayerPrefs.GetString (m_ID + "_saveGame");
                 m_inkStory.state.LoadJson (savedJson);
                 Debug.Log ("Loaded story state");
             } else { // If we can't, we start from beginning
                 Debug.Log ("No saved story found - starting new story");
+                m_inkStory = new Story (m_inkJsonAsset.text);
             }
         }
 
         public void ClearSavedStory () {
-            PlayerPrefs.DeleteKey ("InkWriter_ExampleSave");
+            PlayerPrefs.DeleteKey (m_ID + "_saveGame");
         }
 
         public bool SavedStory {
             get {
-                return PlayerPrefs.HasKey ("InkWriter_ExampleSave");
+                return PlayerPrefs.HasKey (m_ID + "_saveGame");
             }
         }
         public bool IsLoaded () {

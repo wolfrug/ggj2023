@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Ink.Runtime;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace InkEngine {
+
+    [System.Serializable]
+    public class InkStoryStateEvent : UnityEvent<InkStoryStateManager> { }
 
     [System.Serializable]
     public class InkTextVariable {
@@ -78,6 +82,9 @@ namespace InkEngine {
         public InkStoryVariableData m_defaultTextVariables; // a scriptable object with the default ones, for quick lookup
         public List<InkTextVariable> m_searchableTextVariables = new List<InkTextVariable> { }; // which text variables we are searching for & parsing
         public bool m_startOnInit = true;
+        public InkStoryStateEvent m_onStoryInitEvent;
+        public InkStoryStateEvent m_onStoryLoadedEvent;
+        public InkStoryStateEvent m_onStorySavedEvent;
 
         void Awake () {
             if (m_startOnInit) {
@@ -91,10 +98,22 @@ namespace InkEngine {
         }
         public void SaveStory () {
             m_storyObject.SaveStory ();
+            m_onStorySavedEvent.Invoke (this);
+        }
+        public void LoadStory () {
+            InitStory ();
+        }
+        public void ResetStory () {
+            m_storyObject.ClearSavedStory ();
+            InitStory ();
         }
         public void InitStory () { // Init -or- load
+            if (m_storyObject.SavedStory) {
+                m_onStoryLoadedEvent.Invoke (this);
+            }
             m_storyObject.InitStory ();
             m_staticStoryObject = m_storyObject;
+            m_onStoryInitEvent.Invoke (this);
         }
         public bool SavedStory {
             get {
@@ -207,6 +226,11 @@ namespace InkEngine {
             returnVal.choice = newChoice;
             returnVal.choiceText = ParseInkText (newChoice.text);
             return returnVal;
+        }
+
+        [NaughtyAttributes.Button]
+        void ClearStoryData () {
+            m_storyObject.ClearSavedStory ();
         }
     }
 }

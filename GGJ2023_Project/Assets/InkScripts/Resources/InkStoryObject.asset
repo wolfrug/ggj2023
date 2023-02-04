@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9be7fad9af1aeb47955c20e48feff60, type: 3}
   m_Name: InkStoryObject
   m_EditorClassIdentifier: 
-  m_ID: default
+  m_ID: ggj2023
   m_inkJsonAsset: {fileID: 4900000, guid: 5f024a89d7be45148a361ba6488610ba, type: 3}
