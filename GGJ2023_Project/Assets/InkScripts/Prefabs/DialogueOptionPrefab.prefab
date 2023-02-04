@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 229fcd2fed32f854a9b98f3008fa7c26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f15e771b4678804b991be63cf18382d, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2.01
+  m_PixelsPerUnitMultiplier: 1.17
 --- !u!114 &3390573452029643407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text New Text
+  m_text: ' dsds ds sd sd'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d46b2f6e9e8834f4397bfc228763f6b6, type: 2}
   m_sharedMaterial: {fileID: 6968223893685178079, guid: d46b2f6e9e8834f4397bfc228763f6b6, type: 2}
@@ -240,8 +240,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 70.68231, y: 9.42429, z: -5.084122, w: 9.4242935}
+  m_margin: {x: 83.5954, y: 9.42429, z: 78.850815, w: 9.4242935}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

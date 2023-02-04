@@ -32,12 +32,13 @@ public class RuneStone : MonoBehaviour {
         m_coveringRunestone.gameObject.SetActive (true);
         m_backRunestone.Reset ();
         m_coveringRunestone.Reset ();
-        if (m_typeWriter != null) {
+      /*  if (m_typeWriter != null) {
             m_typeWriter.ClearWriter ();
             m_typeWriter.Write (textToShow);
         } else {
             m_textObject.SetText (textToShow);
         }
+        */
     }
 
     public void DissolveText () {

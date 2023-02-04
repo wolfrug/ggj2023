@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b3f2569b8e88e4f4e8ee3c0493a053bf, type: 3}
+        m_Texture: {fileID: 2800000, guid: dfc299a6c73a521478e5df7faf856099, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -46,7 +46,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DissolveValue: 0
+    - _DissolveValue: 1
     - _EnableExternalAlpha: 0
     - _GradientAdjust: 7.8
     - _LargestVal: 20
