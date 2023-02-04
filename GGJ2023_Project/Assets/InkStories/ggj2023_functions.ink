@@ -1,10 +1,10 @@
-LIST MainInventory = Test, Test2, BaseItem
+LIST MainInventory = Mead, Bracteate
 LIST AbilityInventory = (Body), (Mind), (Follower), (Luck)
 VAR Body_stack = 0
 VAR Mind_stack = 0
 VAR Follower_stack = 0
 VAR Luck_stack = 0
-VAR Test_stack = 0
+VAR Mead_stack = 0
 VAR debug = true
 
 ===function UpdateInventory()
@@ -93,19 +93,16 @@ INV_SET(AbilityInventory)
 ~temp result = amount
 ~temp stackableVar = false
 {variable:
-- Test:
-~displayName = "Test 1"
-~result = h_alterStack(Test_stack, amount, 3)
-{Test_stack<=0 && result<0:
+- Mead:
+~displayName = "Mead of Poetry"
+~result = h_alterStack(Mead_stack, amount, 3)
+{Mead_stack<=0 && result<0:
 ~removeItem = true
 }
 ~stackableVar = true
-- Test2:
+- Bracteate:
 // has no stack
-~displayName = "Test 2"
-- BaseItem:
-// has no stack
-~displayName = "Base Item"
+~displayName = "Bracteate"
 }
 // stackable variables do this
 {stackableVar:

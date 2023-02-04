@@ -218,7 +218,7 @@ MonoBehaviour:
   punctuationPause: 0.1
   skipButton_: {fileID: 0}
   writeTextOnStart_: 1
-  useFade_: 1
+  useFade_: 0
   clearOldTextWithFade: 0
   isWriting_: 0
   startedEvent_:

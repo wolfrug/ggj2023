@@ -198,47 +198,52 @@ PrefabInstance:
     m_TransformParent: {fileID: 3485106938093570341}
     m_Modifications:
     - target: {fileID: 958297151802366574, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
+      propertyPath: m_text
+      value: The Mead of Suttungr - anyone who imbibes this is gifted the power of
+        the skald, able to answer any question or recite any poem.
+      objectReference: {fileID: 0}
+    - target: {fileID: 958297151802366574, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
       propertyPath: m_fontSize
-      value: 24
+      value: 29.65
       objectReference: {fileID: 0}
     - target: {fileID: 958297151802366574, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 24
+      propertyPath: m_fontSizeMax
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 958297151802366574, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 958297151802366574, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 958297151802366575, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 278.44
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 958297151802366575, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 186.234
-      objectReference: {fileID: 0}
-    - target: {fileID: 958297151802366575, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -4.8665
+      value: 183.4859
       objectReference: {fileID: 0}
     - target: {fileID: 958297151802366575, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -19.739
+      value: 1.9901
       objectReference: {fileID: 0}
     - target: {fileID: 958297152647117976, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
       propertyPath: m_fontSize
-      value: 24
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 958297152647117976, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
       propertyPath: m_fontSizeBase
-      value: 24
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 958297152647117977, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 66.1
       objectReference: {fileID: 0}
     - target: {fileID: 958297152647117977, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 31.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978424073097749282, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978424073097749282, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
+      propertyPath: m_fontSizeBase
       value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3372441837125156375, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
@@ -325,29 +330,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3485106937689212354, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
-      propertyPath: m_fontSize
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 3485106937689212354, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 3485106937689212413, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 278.436
-      objectReference: {fileID: 0}
     - target: {fileID: 3485106937689212413, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 58.534
-      objectReference: {fileID: 0}
-    - target: {fileID: 3485106937689212413, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -4.866
+      value: 45.6984
       objectReference: {fileID: 0}
     - target: {fileID: 3485106937689212413, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -58.222
+      value: -51.804184
+      objectReference: {fileID: 0}
+    - target: {fileID: 3690227875616173885, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 101.3784
+      objectReference: {fileID: 0}
+    - target: {fileID: 3690227875616173885, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 31.100052
       objectReference: {fileID: 0}
     - target: {fileID: 5208724619949293808, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
       propertyPath: m_Name

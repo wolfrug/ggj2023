@@ -115,8 +115,20 @@ public class TypeWriter : MonoBehaviour {
             // Write the text out one letter at a time
             int stringLength = theText.Length;
             string writtenText = "";
+            string textLeft = theText;
             skipWrite_ = false;
             for (int i = 0; i < stringLength; i++) {
+                if (theText[i] == '<') {
+                    while (theText[i] != '>') {
+                        Debug.Log ("Skipped char: " + theText[i]);
+                        writtenText += theText[i];
+                        textLeft.Remove (0, 1);
+                        i++;
+                    }
+                    Debug.Log ("Skipped final char: " + theText[i]);
+                    writtenText += theText[i];
+                    i++;
+                }
                 writtenText += theText[i];
                 // Punctuation!
                 if (IsPunctuation (theText[i])) {

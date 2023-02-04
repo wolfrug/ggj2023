@@ -27,6 +27,7 @@ public class BetterTooltip : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
         Tooltip.transform.SetParent (m_parentCanvas.transform);
         m_tooltipRectTransform = Tooltip.GetComponent<RectTransform> ();
         Tooltip.SetActive (false);
+
     }
 
     public bool Active {
@@ -103,5 +104,9 @@ public class BetterTooltip : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
         // We don't check for IsActive here, we just close it
         CancelInvoke ("Activate");
         Deactivate ();
+    }
+    void OnDestroy () {
+        // Destroy the tooltip object too
+        Destroy (m_parentCanvas.gameObject);
     }
 }

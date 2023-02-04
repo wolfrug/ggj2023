@@ -17,15 +17,19 @@ INCLUDE ggj2023_9_mimirs_well.ink
 }
 ==start
 #image.none
+{alterAbility(Body, 1)}
 {UpdateInventory()}
 {Move(currentLocation)}
 {debug:
+->testItemAdding
 ~allowedLocation+=(Location1, Location2)
 "Quite something." You say. #image.player
 "Isn't it?" Nyrna agrees. #image.nyrna
 "What're we talking about?" #image.angrboda
 "Yeah, tell us." #image.sigyn
 "I can't see shit." #image.loki
+"Haha, wanna party?" #image.hel
+"Always, sister.", #image.fenrir
 "Nevermind." #image.none
 }
 ->currentLocationKnot
@@ -52,21 +56,23 @@ Testing travel.
 
 ==testItemAdding
 + [Add one test item 1]
-{alterItem(Test, 1)}
+{alterItem(Mead, 1)}
 Done.
-->start
+->testItemAdding
 + [Remove one test item 1]
-{alterItem(Test, -1)}
+{alterItem(Mead, -1)}
 Done. #image.one
-->start
+->testItemAdding
 + [Add one test item 2]
-{alterItem(Test2, 1)}
+{alterItem(Bracteate, 1)}
 Done. #image.two
-->start
+->testItemAdding
 + [Remove one test item 2]
-{alterItem(Test2, -1)}
+{alterItem(Bracteate, -1)}
 Done. 
-->start
+->testItemAdding
++ [Test movement.]
+->testStuff
 
 ==end
 The end!
