@@ -84,29 +84,29 @@ There were NO locations available, and thus we arrived at this error. Oops.
 ->travel_main
 
 ==1_nastrond
-#image.nastrond #saveGame
+#image.nastrond #saveGame #clearText
 ->nastrond_main
 ==2_mangroves
-#image.mangroves #saveGame
+#image.mangroves #saveGame #clearText
 ->mangroves_main
 ==3_caves
-#image.caves #saveGame
+#image.caves #saveGame #clearText
 ->caves_main
 ==4_helheim_bridge
-#image.helheim_bridge #saveGame
+#image.helheim_bridge #saveGame #clearText
 ->helheim_bridge_main
 ==5_helheim_descent
-#image.helheim_descent #saveGame
+#image.helheim_descent #saveGame #clearText
 ->helheim_descent_main
 ==6_runestone_field
-#image.runestone_field #saveGame
+#image.runestone_field #saveGame #clearText
 ->runestone_field_main
 ==7_valley
-#image.valley #saveGame
+#image.valley #saveGame #clearText
 ->valley_main
 ==8_forest
-#image.forest #saveGame
+#image.forest #saveGame #clearText
 ->forest_main
 ==9_mimirs_well
-#image.mimirs_well #saveGame
+#image.mimirs_well #saveGame #clearText
 ->mimirs_well_main
