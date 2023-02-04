@@ -17,9 +17,11 @@ INCLUDE ggj2023_9_mimirs_well.ink
 }
 ==start
 #image.none
-{alterAbility(Body, 1)}
+{start < 2:
+->setStartingStats->
+}
 {UpdateInventory()}
-{Move(currentLocation)}
+{Teleport(currentLocation)}
 /*{debug:
 ->testItemAdding
 ~allowedLocation+=(Location1, Location2)
@@ -35,6 +37,13 @@ INCLUDE ggj2023_9_mimirs_well.ink
 */
 ->currentLocationKnot
 
+==setStartingStats
+// What stats we have in the beginning!
+~Body_stack = RANDOM(4,6)
+~Mind_stack = RANDOM(4,6)
+~Luck_stack = RANDOM(2,8)
+~Follower_stack = 10
+->->
 ==testStuff
 Testing travel.
 {alterAbility(Luck, 2)}
