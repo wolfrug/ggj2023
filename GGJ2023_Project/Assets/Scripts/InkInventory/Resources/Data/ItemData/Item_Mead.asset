@@ -18,4 +18,4 @@ MonoBehaviour:
   m_description: The Mead of Suttungr - anyone who imbibes this is gifted the power
     of the skald, able to answer any question or recite any poem.
   m_maxStack: 3
-  m_prefab: {fileID: 3485106938093570340, guid: 9a40f6a39f5adda40b36174627e6b657, type: 3}
+  m_prefab: {fileID: 3485106938093570340, guid: 89eaa5ea119aef2469f7fb8cfbf06658, type: 3}

@@ -17,10 +17,11 @@ INCLUDE ggj2023_9_mimirs_well.ink
 }
 ==start
 #image.none
-{alterAbility(Body, 2)}
+{alterAbility(Body, 1)}
 {UpdateInventory()}
 {Move(currentLocation)}
 {debug:
+->testItemAdding
 ~allowedLocation+=(Location1, Location2)
 "Quite something." You say. #image.player
 "Isn't it?" Nyrna agrees. #image.nyrna
@@ -57,19 +58,21 @@ Testing travel.
 + [Add one test item 1]
 {alterItem(Mead, 1)}
 Done.
-->start
+->testItemAdding
 + [Remove one test item 1]
 {alterItem(Mead, -1)}
 Done. #image.one
-->start
+->testItemAdding
 + [Add one test item 2]
 {alterItem(Bracteate, 1)}
 Done. #image.two
-->start
+->testItemAdding
 + [Remove one test item 2]
 {alterItem(Bracteate, -1)}
 Done. 
-->start
+->testItemAdding
++ [Test movement.]
+->testStuff
 
 ==end
 The end!
