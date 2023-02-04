@@ -3,7 +3,7 @@ The passageway down is smooth, a perfect circle of darkness descending into the 
 
 Nyrna stand at the breach and lifts her hand high, her palm cupped around a small flame.
 
-"Ready when you are Oath-breaker." She says. #image.Nyrna
+"Ready when you are Oath-breaker." She says. #image.nyrna
 
 The illumination from her small flame scatters light across the walls, reflecting in the facets of black rock embedded there like shards of ancient glass. #image.none
 
@@ -17,15 +17,23 @@ You cast your gaze back over your shoulder, and light scatters across the cave w
 
 Is that movement you glimpse? A looming shadow? Are those footsteps trailing off into the distance?
 
-"Byleistr."#image.Nyrna
+* [Steel your mind - the Underworld is full of illusions and dark magic.]
+{alterAbility(Mind, 1)}
+* [Prepare yourself to fight: Skadi's snakes were known to make these caves their home.]
+{alterAbility(Body, 1)}
+
+- "Byleistr."#image.nyrna
 
 The sound of your name brings you to your senses. How long has it been since she last called you that? How many times are you likely to hear it spoken again.
 
 *["I'm here."] You find yourself saying. #image.player
 
 - What you mean to say is that you are fine. That you haven't gone mad. That you aren't a child, afraid of the dark. But what use are such words between old friends. She knows all that already.
-
-"This way." She says, and offers up a reassuring smile. #image.Nyrna
+{Follower_stack>=9:
+And so far, you have proven you can hold your own.
+{alterAbility(Luck, 1)}
+}
+"This way." She says, and offers up a reassuring smile. #image.nyrna
 
 *[...] #image.none
 
@@ -35,7 +43,7 @@ You see many more cave entrances lining the cavern walls, like a gallery of open
 
 As your eyes adjust you notices the mushrooms blooming across moist patches of stone, their pale caps glowing faintly in the darkness.
 
-"Someone has plucked these recently." Nyrna observes, pointing at some disturbance in the fungal growth. "Sigyn, perhaps?"
+"Someone has plucked these recently." Nyrna observes, pointing at some disturbance in the fungal growth. "Sigyn, perhaps?" #image.nyrna
 
 By all accounts your brother is tightly bound, confined to a cave somewhere within this vast maze.
 
@@ -59,7 +67,7 @@ Even Nyrna looks surprised.
 
 *["You're still fond of knives I see."] You say, careful not to make any sudden movements. #image.player
 
--"And I see you're still fond of entering peoples homes without invitation, brother-in-law." #image.Sigyn
+-"And I see you're still fond of entering peoples homes without invitation, brother-in-law." #image.sigyn
 
 It takes her an awfully long time to remove the knife from your throat, and when you turn to face her she regards you with the air of a wary animal - just as likely to bite you as befriend you.
 
@@ -69,7 +77,7 @@ Her face is shrouded under a hood, but you can see that her stay in these caves 
 
 Sensing your scrutiny, she averts her gaze, and bends down to busy herself at the fireplace, pushing the coals back and forth with no clear purpose.
 
-"Why did you come here after all this time?" She asks, sullen, accusing, hopeful. #image.Sigyn
+"Why did you come here after all this time?" She asks, sullen, accusing, hopeful. #image.sigyn
 
 #image.none
 You feel the taste of bitter shame rise in your throat. You were so concerned with your own troubles that you never considered what it must be like for her. 
@@ -86,7 +94,7 @@ Off to one side you hear Nyrna make a quiet sound of contempt. You can hardly bl
 
 To think, once you were called brave, and songs of your exploits were sung in the halls of Vallalla by heroes of every Age.
 
-"I suppose that <i>woman</i> told you I was down here." She says eventually, misinterpreting your silence, or perhaps just seeking to fill it. #image.Sigyn
+"I suppose that <i>woman</i> told you I was down here." She says eventually, misinterpreting your silence, or perhaps just seeking to fill it. #image.sigyn
 
 #image.player
 She can't have many people to converse with down here. But then again, your brother did always enjoy the sound of his own voice. Loki silver-tongue, sharp of wit and sharp of word, bound by blood to Odin himself.
@@ -98,7 +106,9 @@ You wonder. Does he still talk so freely? Can he talk at all? Or did they cut ou
 Baldr was the one exception. //le gasp, we speak his name. Or think it, whatever.
 
 *["Angr–."] You start to speak her name, then think better of it. #image.player
-"Yes, she mentioned your, um... situation."
+"No, she did not mention you."
+
+Sigyn scoffed, hitting the coals as if they were the heads of Loki's many bastard children.
 
 **["I'm sorry it took so long for me to come here."]
 
@@ -110,7 +120,7 @@ She treats your words with the contempt they deserve, and instead gestures towar
 
 She glares at you, a flash of baleful moonlight, then shrugs and gestures towards the end of the cave with the tip of her knife. 
 
--"That way." She says, hunching her shoulders. #image.Sigyn
+-"That way." She says, hunching her shoulders. #image.sigyn
 
 You open your mouth to say something, <i>anything</i> more, but Nyrna steps towards you with a firm shake of her head. 
 
