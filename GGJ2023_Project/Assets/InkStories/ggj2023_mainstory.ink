@@ -26,6 +26,7 @@ INCLUDE ggj2023_9_mimirs_well.ink
 "What're we talking about?" #image.angrboda
 "Yeah, tell us." #image.sigyn
 "I can't see shit." #image.loki
+"Haha, wanna party?" #image.hel
 "Nevermind." #image.none
 }
 ->currentLocationKnot
