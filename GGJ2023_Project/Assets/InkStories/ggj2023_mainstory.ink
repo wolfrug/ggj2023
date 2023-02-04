@@ -20,7 +20,7 @@ INCLUDE ggj2023_9_mimirs_well.ink
 {alterAbility(Body, 1)}
 {UpdateInventory()}
 {Move(currentLocation)}
-{debug:
+/*{debug:
 ->testItemAdding
 ~allowedLocation+=(Location1, Location2)
 "Quite something." You say. #image.player
@@ -32,6 +32,7 @@ INCLUDE ggj2023_9_mimirs_well.ink
 "Always, sister.", #image.fenrir
 "Nevermind." #image.none
 }
+*/
 ->currentLocationKnot
 
 ==testStuff
