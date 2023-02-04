@@ -1,12 +1,18 @@
 LIST MainInventory = Test, Test2, BaseItem
+LIST AbilityInventory = (Body), (Mind), (Follower), (Luck)
+VAR Body_stack = 0
+VAR Mind_stack = 0
+VAR Follower_stack = 0
+VAR Luck_stack = 0
 VAR Test_stack = 0
 VAR debug = true
 
 ===function UpdateInventory()
 // We'll probably only have one so...
 INV_SET(MainInventory)
+INV_SET(AbilityInventory)
 
-===function alterStack(ref var, amount, maxStack)
+===function h_alterStack(ref var, amount, maxStack)
 // Clean-up function
 // returns actual value change
 ~temp previousVal = var
@@ -24,7 +30,61 @@ INV_SET(MainInventory)
 }
 ~return returnVal
 
-===function alterItemStack(variable, amount)
+===function alterAbility(variable, amount)
+// Use this to alter items with stacks - variable should be the -inventory- variable
+~temp removeItem = false
+~temp removeFromStack = false
+~temp addItem = false
+~temp displayName = variable
+~temp result = amount
+~temp stackableVar = false
+{variable:
+- Body:
+~displayName = "Hamr"
+~result = h_alterStack(Body_stack, amount, 10)
+~stackableVar = true
+- Mind:
+~displayName = "Hugr"
+~result = h_alterStack(Mind_stack, amount, 10)
+~stackableVar = true
+- Luck:
+~displayName = "Hamingja"
+~result = h_alterStack(Luck_stack, amount, 10)
+~stackableVar = true
+- Follower:
+~displayName = "Fylgja"
+~result = h_alterStack(Follower_stack, amount, 10)
+~stackableVar = true
+}
+// stackable variables do this
+{stackableVar:
+{result>0:
+~addItem = true
+}
+{result<0:
+~removeFromStack = true
+}
+- else:
+// non-stackable variables do this
+{amount<0 && AbilityInventory?variable:
+~removeItem = true
+}
+}
+// If it's > 0 and the inventory does not have it, add it here
+{not (AbilityInventory?variable) && amount > 0:
+~AbilityInventory+=variable
+~addItem = true
+}
+{removeItem:
+~AbilityInventory-=variable
+}
+{result<0:
+~result = result * -1
+}
+{addItem || removeItem || removeFromStack:
+{UpdateInventory()} <color=yellow>{removeItem||removeFromStack: {displayName} decreased.}{addItem: {displayName} increased!}</color>
+}
+===function alterItem(variable, amount)
 // Use this to alter items with stacks - variable should be the -inventory- variable
 ~temp removeItem = false
 ~temp removeFromStack = false
@@ -35,7 +95,7 @@ INV_SET(MainInventory)
 {variable:
 - Test:
 ~displayName = "Test 1"
-~result = alterStack(Test_stack, amount, 3)
+~result = h_alterStack(Test_stack, amount, 3)
 {Test_stack<=0 && result<0:
 ~removeItem = true
 }

@@ -98,9 +98,9 @@ namespace InkEngine {
                 InkDialogueLine currentLine = dialogueLines[i];
                 InvokeDialogueEvents (currentLine);
                 yield return StartCoroutine (ParseSpecialTags (currentLine.inkTags));
-                m_currentDialogBox.SpawnTextObject (currentLine.displayText);
+                GameObject newBox = m_currentDialogBox.SpawnTextObject (currentLine.displayText);
                 m_dialogueShownEvent.Invoke (currentLine);
-                yield return new WaitUntil (() => m_currentDialogBox.m_canContinue);
+                yield return new WaitUntil (() => m_currentDialogBox.m_canContinue || newBox == null); // if no box is spawned, we skip
                 if (m_currentDialogBox.HasContinueButton) {
                     m_currentDialogBox.m_canContinue = false;
                 }

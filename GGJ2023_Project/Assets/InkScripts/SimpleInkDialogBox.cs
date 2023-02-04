@@ -61,6 +61,7 @@ public class SimpleInkDialogBox : MonoBehaviour {
     }
 
     public GameObject SpawnTextObject (string text) {
+        text = text.Trim();
         if (text.Length < 1) { return null; } // we don't spawn empties
         GameObject inkTextObject = Instantiate (m_textBoxPrefab, m_textParent);
 
