@@ -4,7 +4,7 @@ VAR currentLocationKnot = ->travel_main.location1
 
 ==travel_main
 //Go here whenever we want to go somewhere
-#continue
+#continue #image.none
 + {debug && allowedLocation?Location1} [{IsInteractable(allowedLocation?Location1)}{UseButton("1")}{Move(Location1)}]
 ->location1
 + {debug && allowedLocation?Location2}[{IsInteractable(allowedLocation?Location2)}{UseButton("2")}{Move(Location2)}]

@@ -12,7 +12,7 @@ INCLUDE ggj2023_8_forest.ink
 INCLUDE ggj2023_9_mimirs_well.ink
 
 {debug:
-~allowedLocation+=(Location1, Location2)
+//~allowedLocation+=(Location1, Location2)
 ->start
 }
 ==start

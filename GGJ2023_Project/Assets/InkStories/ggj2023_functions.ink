@@ -1,5 +1,6 @@
-LIST MainInventory = Mead, Bracteate, Feather
+LIST MainInventory = Mead, Bracteate, Feather, Laevateinn
 LIST AbilityInventory = (Body), (Mind), (Follower), (Luck)
+LIST DamageSeverity = (None), (Small), (Medium), (Large)
 VAR Body_stack = 0
 VAR Mind_stack = 0
 VAR Follower_stack = 0
@@ -166,6 +167,7 @@ INV_SET(AbilityInventory)
 ===function AbilityCheck(ability, number)
 ~temp stack = GetStack(ability)
 ~temp success = false
+~temp randomRoll = RANDOM(0,100)
 ~temp percentageNeeded = (stack * 100) / number
 {stack<1:
 ~success = false
@@ -173,27 +175,27 @@ INV_SET(AbilityInventory)
 {ability:
 - Body:
 {stack>number: // We are -better- than the target nr.
-~success = AbilityCheck(Luck, RANDOM(1, number/stack))
+~success = true
 - else:
-{stack==number: // Exactly equal
+{stack==number: // Exactly equal -> we use luck
 ~success = AbilityCheck(Luck, Luck_stack)
-- else: // It is smaller :( :(
-~success = AbilityCheck(Luck, number-stack)
+- else: // It is smaller -> just roll
+~success = randomRoll<=percentageNeeded
 }
 }
 - Mind:
 {stack>number: // We are -better- than the target nr.
-~success = AbilityCheck(Luck, (stack-number))
+~success = true
 - else:
-{stack==number: // Exactly equal
+{stack==number: // Exactly equal -> we use luck
 ~success = AbilityCheck(Luck, Luck_stack)
-- else: // It is smaller :( :(
-~success = AbilityCheck(Luck, number-stack)
+- else: // It is smaller -> just roll
+~success = randomRoll<=percentageNeeded
 }
 }
 - Luck:
-// Used by everyone; just a regular ol' dice roll
-~temp randomRoll = RANDOM(0,100)
+// Just a regular ol' dice roll
+
 ~success = randomRoll<percentageNeeded
 - Follower:
 // Special case, where it always succeeds, but has a set chance to lower stack
@@ -202,14 +204,25 @@ INV_SET(AbilityInventory)
 {lowerStat:
 {alterAbility(Follower, -1)}
 }
-~success = true
+~return true
 }
 }
 {success:
-[Success chance: {percentageNeeded}]
-~return true
+<color=green><>
 - else:
-~return false
+<color=red><>
+}
+(Rolled {randomRoll} against {percentageNeeded})</color>
+~return success
+
+===function AbilityDamage(ability, severity)
+{severity:
+- Small:
+{alterAbility(ability, -RANDOM(1,2))}
+- Medium:
+{alterAbility(ability, -RANDOM(2,4))}
+- Large:
+{alterAbility(ability, -RANDOM(4,6))}
 }
 ===function IsInteractable(b) // again, in case we change things or wt
 {b:
