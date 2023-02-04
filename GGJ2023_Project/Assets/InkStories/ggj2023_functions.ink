@@ -224,4 +224,25 @@ INTERACTABLE(false)
 LOCATION({b})
 
 ===function Move(to)
-MOVE({to})
+~temp toString = to
+{to:
+-Location1:
+~toString = "1"
+-Location2:
+~toString = "2"
+-Location3:
+~toString = "3"
+-Location4:
+~toString = "4"
+-Location5:
+~toString = "5"
+-Location6:
+~toString = "6"
+-Location7:
+~toString = "7"
+-Location8:
+~toString = "8"
+-Location9:
+~toString = "9"
+}
+MOVE({toString})

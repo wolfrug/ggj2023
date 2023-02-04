@@ -18,8 +18,13 @@ INCLUDE ggj2023_9_mimirs_well.ink
 ==start
 #image.none
 {UpdateInventory()}
-~currentLocation = Location1
-{Move("1")}
+{Move(currentLocation)}
+{debug:
+~allowedLocation+=(Location1, Location2)
+}
+->currentLocationKnot
+
+==testStuff
 Testing travel.
 {alterAbility(Luck, 2)}
 {alterAbility(Body, 1)}
