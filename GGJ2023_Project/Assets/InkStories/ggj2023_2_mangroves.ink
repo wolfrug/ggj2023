@@ -1,5 +1,5 @@
 ==mangroves_main
-You venture further into the roots, and slowly a new landscape emerges. The mist disappates, giving way to a sweltering heat. 
+You venture further into the roots, and slowly a new landscape emerges. The mist disippates, giving way to a sweltering heat. 
 
 The living roots of the tree have nested and burrowed here, spearing into the loamy soil where eddies of slow moving water flow and waver to form a sort of forest, green foliage and moss dripping from the canopy above.
 
@@ -7,7 +7,7 @@ The living roots of the tree have nested and burrowed here, spearing into the lo
 
 -Your companion does not deign to answer, instead watching with fascination as an emerald green frog leaps across the sprawl of roots and splashes into a nearby stream.
 
-Before long you are knee deep in brakish water, small biting things gnawing at you from above and below. 
+Before long you are knee deep in brackish water, small biting things gnawing at you from above and below. 
 
 You slap something on your neck, and wipe the sweat from your brow.
 
@@ -36,9 +36,9 @@ Before you can react, he slides the fingers of his grubby hand into your palm, a
 
 *[Follow.]
 
--Really, what choice fo you have?
+-Really, what choice do you have?
 
-The wolf-children lead you through the tree-roots, their passage eerily silent as everything within the swamp falls quiet in their wake. They wear human skins now, their <i>hamr</i> that of normal men, but their is no mistaking what they turly are beneath.
+The wolf-children lead you through the tree-roots, their passage eerily silent as everything within the swamp falls quiet in their wake. They wear human skins now, their <i>hamr</i> that of normal men, but there is no mistaking what they truly are beneath.
 
 At last you emerge in a clearing. A small wattle hut rests on a rounded hill above the swamp, smoke rising from the hole in the roof.
 
