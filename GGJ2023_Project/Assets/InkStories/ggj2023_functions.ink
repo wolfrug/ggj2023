@@ -1,4 +1,4 @@
-LIST MainInventory = Mead, Bracteate
+LIST MainInventory = Mead, Bracteate, Feather
 LIST AbilityInventory = (Body), (Mind), (Follower), (Luck)
 VAR Body_stack = 0
 VAR Mind_stack = 0

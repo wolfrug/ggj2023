@@ -238,6 +238,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 31.1
       objectReference: {fileID: 0}
+    - target: {fileID: 958297152647117990, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1978424073097749282, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
       propertyPath: m_fontSize
       value: 36
@@ -351,6 +355,10 @@ PrefabInstance:
       value: Tooltip
       objectReference: {fileID: 0}
     - target: {fileID: 5208724619949293808, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180796593794998493, guid: 3f964308943bb7c4b8f33290357b595c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
