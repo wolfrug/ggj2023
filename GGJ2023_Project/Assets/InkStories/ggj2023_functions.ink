@@ -166,7 +166,54 @@ INV_SET(AbilityInventory)
 ~temp hasEnough = GetStack(ability)>=minimum
 {hasEnough:<color=green>|<color=red>}{IsInteractable(hasEnough)}[{GetStack(ability)}/{minimum} {DisplayName(ability)}]</color>
 
-
+===function AbilityCheck(ability, number)
+~temp stack = GetStack(ability)
+~temp success = false
+~temp percentageNeeded = (stack * 100) / number
+{stack<1:
+~success = false
+}
+{ability:
+- Body:
+{stack>number: // We are -better- than the target nr.
+~success = AbilityCheck(Luck, RANDOM(1, number/stack))
+- else:
+{stack==number: // Exactly equal
+~success = AbilityCheck(Luck, Luck_stack)
+- else: // It is smaller :( :(
+~success = AbilityCheck(Luck, number-stack)
+}
+}
+- Mind:
+{stack>number: // We are -better- than the target nr.
+~success = AbilityCheck(Luck, (stack-number))
+- else:
+{stack==number: // Exactly equal
+~success = AbilityCheck(Luck, Luck_stack)
+- else: // It is smaller :( :(
+~success = AbilityCheck(Luck, number-stack)
+}
+}
+- Luck:
+// Used by everyone; just a regular ol' dice roll
+~temp randomRoll = RANDOM(0,100)
+~success = randomRoll<percentageNeeded
+- Follower:
+// Special case, where it always succeeds, but has a set chance to lower stack
+{stack>0:
+~temp lowerStat = RANDOM(0,1)>0
+{lowerStat:
+{alterAbility(Follower, -1)}
+}
+~success = true
+}
+}
+{success:
+[Success chance: {percentageNeeded}]
+~return true
+- else:
+~return false
+}
 ===function IsInteractable(b) // again, in case we change things or wt
 {b:
 INTERACTABLE(true)

@@ -21,12 +21,15 @@ INCLUDE ggj2023_9_mimirs_well.ink
 ~currentLocation = Location1
 {Move("1")}
 Testing travel.
-{alterAbility(Luck, 5)}
+{alterAbility(Luck, 2)}
+{alterAbility(Body, 1)}
 ~allowedLocation+=(Location1, Location2)
 
 + [{RequireAbility(Body, 2)} Fight!]
+{AbilityCheck(Body, 4): You fight, and win.|Nope, you didn't make it.}
 ->travel_main
 + [{RequireAbility(Luck, 2)} Chance it!]
+{AbilityCheck(Luck, 4): Lucky you!|Nope, no luck.}
 ->travel_main
 
 ==testRunestone
