@@ -17,12 +17,16 @@ INCLUDE ggj2023_9_mimirs_well.ink
 }
 ==start
 #image.none
-{alterAbility(Body, 5)}
 {UpdateInventory()}
 ~currentLocation = Location1
 {Move("1")}
-Testing travel. 
+Testing travel.
+{alterAbility(Luck, 5)}
 ~allowedLocation+=(Location1, Location2)
+
++ [{RequireAbility(Body, 2)} Fight!]
+->travel_main
++ [{RequireAbility(Luck, 2)} Chance it!]
 ->travel_main
 
 ==testRunestone

@@ -136,6 +136,36 @@ INV_SET(AbilityInventory)
 {UpdateInventory()} <color=yellow>{removeItem||removeFromStack: Removed {result} {displayName}!}{addItem: Added {result} {displayName}!}</color>
 }
 
+===function GetStack(variable)
+{variable:
+- Body:
+~return Body_stack
+- Mind:
+~return Mind_stack
+- Luck:
+~return Luck_stack
+- Follower:
+~return Follower_stack
+}
+~return 0
+
+===function DisplayName(variable)
+{variable:
+- Body:
+~return "Hamr"
+- Mind:
+~return "Hugr"
+- Luck:
+~return "Hamingja"
+- Follower:
+~return "Fylgja"
+}
+~return variable
+
+===function RequireAbility(ability, minimum)
+~temp hasEnough = GetStack(ability)>=minimum
+{hasEnough:<color=green>|<color=red>}{IsInteractable(hasEnough)}[{GetStack(ability)}/{minimum} {DisplayName(ability)}]</color>
+
 
 ===function IsInteractable(b) // again, in case we change things or wt
 {b:
