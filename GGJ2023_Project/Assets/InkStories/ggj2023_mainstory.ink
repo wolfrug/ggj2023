@@ -17,6 +17,8 @@ INCLUDE ggj2023_9_mimirs_well.ink
 }
 ==start
 #image.none
+{alterAbility(Body, 2)}
+->testItemAdding
 {UpdateInventory()}
 {Move(currentLocation)}
 {debug:
@@ -53,19 +55,19 @@ Testing travel.
 
 ==testItemAdding
 + [Add one test item 1]
-{alterItem(Test, 1)}
+{alterItem(Mead, 1)}
 Done.
 ->start
 + [Remove one test item 1]
-{alterItem(Test, -1)}
+{alterItem(Mead, -1)}
 Done. #image.one
 ->start
 + [Add one test item 2]
-{alterItem(Test2, 1)}
+{alterItem(Bracteate, 1)}
 Done. #image.two
 ->start
 + [Remove one test item 2]
-{alterItem(Test2, -1)}
+{alterItem(Bracteate, -1)}
 Done. 
 ->start
 
