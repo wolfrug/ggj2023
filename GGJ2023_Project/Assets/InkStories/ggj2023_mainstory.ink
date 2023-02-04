@@ -22,7 +22,6 @@ INCLUDE ggj2023_9_mimirs_well.ink
 }
 {UpdateInventory()}
 {Teleport(currentLocation)}
-->mangroves_main
 /*{debug:
 ->testItemAdding
 ~allowedLocation+=(Location1, Location2)

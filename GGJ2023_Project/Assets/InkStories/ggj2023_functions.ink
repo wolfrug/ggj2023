@@ -1,4 +1,4 @@
-LIST MainInventory = Mead, Bracteate, Feather, Laevateinn, Draupnir, Lucet
+LIST MainInventory = Mead, Bracteate, Feather, Laevateinn, Draupnir, Lucet, Vial
 LIST AbilityInventory = (Body), (Mind), (Follower), (Luck)
 LIST DamageSeverity = (None), (Small), (Medium), (Large)
 VAR Body_stack = 0
@@ -161,6 +161,8 @@ INV_SET(AbilityInventory)
 ~return "Draupnir"
 - Lucet:
 ~return "Hel's Lucet"
+- Vial:
+~return "Vial of Tears"
 }
 ~return variable
 
