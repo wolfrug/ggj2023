@@ -5,14 +5,11 @@ Nyrna stand at the breach and lifts her hand high, her palm cupped around a smal
 
 "Ready when you are Oath-breaker." She says. #image.Nyrna
 
-//challenge of wits? find your way through observation - breezes? light? etc?
-
-The light from her small flame scatters light across the walls, reflecting in the facets of black rock embedded there like shards of ancient glass. 
+The illumination from her small flame scatters light across the walls, reflecting in the facets of black rock embedded there like shards of ancient glass. #image.none
 
 *[...]
--
-#image.none 
-Soon the one passage branches, then branches again. It would be easy for one to lose their way down here. A moments inattention, one thoughtless step, and you could find yourself trapped in an endless spiral of passageways with no hope of any succour.
+
+-Soon the one passage branches, then branches again. It would be easy for one to lose their way down here. A moments inattention, one thoughtless step, and you could find yourself trapped in an endless spiral of passageways with no hope of any succour.
 
 You are not faint hearted, but you find yourself very aware of the sound of your breathing in the darkness, and the steady thrum of your own heart, so loud to your own ears that for a moment you wonder if perhaps there is another walking in the shadows alongside you.
 
@@ -26,17 +23,17 @@ The sound of your name brings you to your senses. How long has it been since she
 
 *["I'm here."] You find yourself saying. #image.player
 
--What you mean to say is that you are fine. That you haven't gone mad. That you aren't a child, afraid of the darkness. But what use are such words between old friends. She knows all that already.
+- What you mean to say is that you are fine. That you haven't gone mad. That you aren't a child, afraid of the dark. But what use are such words between old friends. She knows all that already.
 
 "This way." She says, and offers up a reassuring smile. #image.Nyrna
 
 *[...] #image.none
 
-- After what feels like aeons, the cave opens up, and you find yourself in a vast underground cavern. Stalactite's hang suspended from the ceiling, vast draperies of wax-like stone dripping downwards to merge with the great stone columns that line the cave floor, like the pillars of some ancient hall. 
+-After what feels like aeons, the cave opens up, and you find yourself in a vast underground cavern. Stalactite's hang suspended from the ceiling, vast draperies of wax-like stone dripping downwards to merge with the great stone columns that line the cave floor, like the pillars of some ancient hall. 
 
-You see many more cave entrances living the cavern walls, like a gallery of open mouths, waiting to be fed
+You see many more cave entrances lining the cavern walls, like a gallery of open mouths, waiting to be fed.
 
-As your eyes adjust you notices the mushrooms blooms across moist patches of stone, their pale caps glowing faintly in the darkness.
+As your eyes adjust you notices the mushrooms blooming across moist patches of stone, their pale caps glowing faintly in the darkness.
 
 "Someone has plucked these recently." Nyrna observes, pointing at some disturbance in the fungal growth. "Sigyn, perhaps?"
 
@@ -49,6 +46,8 @@ Perhaps you should. After all, no good can come of your meeting one another agai
 And yet you find yourself unable to move forward.
 
 Sigyn will know where he is, and so Sigyn you must find.
+
+It’s your last chance to see him. Your last chance to say goodbye.
 
 *[...]
 
@@ -109,11 +108,11 @@ She treats your words with the contempt they deserve, and instead gestures towar
 
 **["Where is he?"]
 
-She glares at you, a flash of baleful moonlight. Then shrugs and gestures towards the end of the cave with the tip of her knife. 
+She glares at you, a flash of baleful moonlight, then shrugs and gestures towards the end of the cave with the tip of her knife. 
 
 -"That way." She says, hunching her shoulders. #image.Sigyn
 
-You open your mouth to say something, anything more, but Nyrna steps towards you with a firm shake of her head. 
+You open your mouth to say something, <i>anything</i> more, but Nyrna steps towards you with a firm shake of her head. 
 
 *[Go to Loki's cave.]->lokis_cave
 
