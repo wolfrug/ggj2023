@@ -20,7 +20,7 @@ So then.
 
 *[This is the land of the dead.]
 
--Or more specifically, this is Náströnd, the Corpse-shore, where unworthy souls like yourself are washed up and discarded. 
+-Or more specifically, this is Nastrond, the Corpse-shore, where unworthy souls like yourself are washed up and discarded. 
 
 If the World Tree is here then its great boughs are hidden in the mist.
 
@@ -100,7 +100,7 @@ She throws the bone at you - nothing but air and light, but you flinch anyway.
 - You could argue about it. You've already done so many times. But you find yourself struck with a strange melancholy. #image.player
 
 *[You will miss these little arguments.]
-*[You are relieve to have the company of a friend.]
+*[You are relieved to have the company of a friend.]
 
 -"Fine. Let's go then."
 
@@ -119,18 +119,16 @@ Then at last.
 #image.Nyrna
 "I think I've found something." She tells you, rushing back from her latest ranging.
 
-You gather your strength and stumble after her, and suddenly the fog thins. 
+You gather your strength and stumble after her, and suddenly the fog thin's. 
 
-A rock looms from the breach, as tall as a jotunn.
-
-
-
+A rock looms from the breach, as tall as a jotunn. -> runestone
 
 + [Leave]
 ->leave
 
 =runestone
 You go to the runestone.
+
 ->runestone_main->
 Cool.
 ->leave
