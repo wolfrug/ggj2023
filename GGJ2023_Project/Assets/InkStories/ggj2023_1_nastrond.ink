@@ -100,7 +100,9 @@ She throws the bone at you - nothing but air and light, but you flinch anyway.
 - You could argue about it. You've already done so many times. But you find yourself struck with a strange melancholy. #image.player
 
 *[You will miss these little arguments.]
+{alterAbility(Mind, 1)}
 *[You are relieved to have the company of a friend.]
+{alterAbility(Luck, 1)}
 
 -"Fine. Let's go then."
 
@@ -119,20 +121,39 @@ Then at last.
 #image.Nyrna
 "I think I've found something." She tells you, rushing back from her latest ranging.
 
-You gather your strength and stumble after her, and suddenly the fog thin's. 
+You gather your strength and stumble after her, and suddenly the fog thins. 
 
-A rock looms from the breach, as tall as a jotunn. -> runestone
+A rock looms from the breach, as tall as a jotunn.
 
-+ [Leave]
-->leave
+"It's up there." She says. "If you are still sure."
+
+The top of the rock is wreathed in the fog, that is how high it is. It is slick with moisture, full of razor-sharp fissures and devoid of any apparent handholds.
+- (options)
+* (body) [{RequireAbility(Body, 5)} You can climb it.]
+At least you think you can. You take on the climb like the giant it looks like - head on.
+{AbilityCheck(Body, 10): After a gruelling fight, you defeat it. ->runestone|Your hand slips on the wet rock, and suddenly you find yourself falling. {AbilityDamage(Body, Small)}}
+
+"Typical." Nyrna sighs, as you pick yourself up.
+->options
+* (mind) [{RequireAbility(Mind, 5)} There must be another way up.]
+{AbilityCheck(Mind, 10): You walk around the rock, carefully studying its surface, until you find what is clearly a set of hand-holds carved into it. You climb it easily.->runestone|You find nothing but the smooth surface of the rock all around. You cry out in frustration. {AbilityDamage(Mind, Small)}}
+->options
+* {body && mind || GetStack(Mind)<5 && GetStack(Body) <5} [{RequireAbility(Follower, 1)} Turn to Nyrna for help.]
+"I need your help." You say. #image.player
+
+Nyrna gives you a dour look. "So early? You know I do not have endless strength to lend you. Not down here." #image.nyrna
+{AbilityCheck(Follower, 1):
+She does not require further convincing, however. Your folgja lends you her strength, holding you as you climb the rock, keeping you from falling and slipping. Soon, you are at the top.
+}
+->runestone
 
 =runestone
-You go to the runestone.
-
+At the top of the rock you find the runestone, and etched into it are words that both are and are not yours. You kneel down by it, while Nyrna nervously watches by your shoulder.
 ->runestone_main->
-Cool.
+"You really did it." Nyrna says, quietly. #image.nyrna
+You do not answer her. You have nothing to explain to her, and time is running out. You climb back down to the beach and look to your next destination.
+~allowedLocation=Location2
 ->leave
 
 =leave
-Time to go.
 ->travel_main

@@ -1,5 +1,6 @@
-LIST MainInventory = Mead, Bracteate, Feather
+LIST MainInventory = Mead, Bracteate, Feather, Laevateinn
 LIST AbilityInventory = (Body), (Mind), (Follower), (Luck)
+LIST DamageSeverity = (None), (Small), (Medium), (Large)
 VAR Body_stack = 0
 VAR Mind_stack = 0
 VAR Follower_stack = 0
@@ -89,20 +90,16 @@ INV_SET(AbilityInventory)
 ~temp removeItem = false
 ~temp removeFromStack = false
 ~temp addItem = false
-~temp displayName = variable
+~temp displayName = DisplayName(variable)
 ~temp result = amount
 ~temp stackableVar = false
 {variable:
 - Mead:
-~displayName = "Mead of Poetry"
 ~result = h_alterStack(Mead_stack, amount, 3)
 {Mead_stack<=0 && result<0:
 ~removeItem = true
 }
 ~stackableVar = true
-- Bracteate:
-// has no stack
-~displayName = "Bracteate"
 }
 // stackable variables do this
 {stackableVar:
@@ -156,6 +153,14 @@ INV_SET(AbilityInventory)
 ~return "Hamingja"
 - Follower:
 ~return "Fylgja"
+- Feather:
+~return "Feather from Fjaedrhamr"
+- Mead:
+~return "Mead of Poetry"
+- Laevateinn:
+~return "The Laevateinn"
+- Bracteate:
+~return "Bracteate"
 }
 ~return variable
 
@@ -163,9 +168,13 @@ INV_SET(AbilityInventory)
 ~temp hasEnough = GetStack(ability)>=minimum
 {hasEnough:<color=green>|<color=red>}{IsInteractable(hasEnough)}[{GetStack(ability)}/{minimum} {DisplayName(ability)}]</color>
 
+===function RequireItem(item)
+{MainInventory?item:<color=green>|<color=red>}{IsInteractable(MainInventory?item)}[Requires {DisplayName(item)}]</color>
+
 ===function AbilityCheck(ability, number)
 ~temp stack = GetStack(ability)
 ~temp success = false
+~temp randomRoll = RANDOM(0,100)
 ~temp percentageNeeded = (stack * 100) / number
 {stack<1:
 ~success = false
@@ -173,27 +182,27 @@ INV_SET(AbilityInventory)
 {ability:
 - Body:
 {stack>number: // We are -better- than the target nr.
-~success = AbilityCheck(Luck, RANDOM(1, number/stack))
+~success = true
 - else:
-{stack==number: // Exactly equal
+{stack==number: // Exactly equal -> we use luck
 ~success = AbilityCheck(Luck, Luck_stack)
-- else: // It is smaller :( :(
-~success = AbilityCheck(Luck, number-stack)
+- else: // It is smaller -> just roll
+~success = randomRoll<=percentageNeeded
 }
 }
 - Mind:
 {stack>number: // We are -better- than the target nr.
-~success = AbilityCheck(Luck, (stack-number))
+~success = true
 - else:
-{stack==number: // Exactly equal
+{stack==number: // Exactly equal -> we use luck
 ~success = AbilityCheck(Luck, Luck_stack)
-- else: // It is smaller :( :(
-~success = AbilityCheck(Luck, number-stack)
+- else: // It is smaller -> just roll
+~success = randomRoll<=percentageNeeded
 }
 }
 - Luck:
-// Used by everyone; just a regular ol' dice roll
-~temp randomRoll = RANDOM(0,100)
+// Just a regular ol' dice roll
+
 ~success = randomRoll<percentageNeeded
 - Follower:
 // Special case, where it always succeeds, but has a set chance to lower stack
@@ -202,14 +211,25 @@ INV_SET(AbilityInventory)
 {lowerStat:
 {alterAbility(Follower, -1)}
 }
-~success = true
+~return true
 }
 }
 {success:
-[Success chance: {percentageNeeded}]
-~return true
+<color=green><>
 - else:
-~return false
+<color=red><>
+}
+(Rolled {randomRoll} against {percentageNeeded})</color>
+~return success
+
+===function AbilityDamage(ability, severity)
+{severity:
+- Small:
+{alterAbility(ability, -RANDOM(1,2))}
+- Medium:
+{alterAbility(ability, -RANDOM(2,4))}
+- Large:
+{alterAbility(ability, -RANDOM(4,6))}
 }
 ===function IsInteractable(b) // again, in case we change things or wt
 {b:
