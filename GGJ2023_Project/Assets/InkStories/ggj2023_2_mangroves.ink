@@ -155,3 +155,5 @@ She shrugs. "He talked of you often, and though we are strangers it's as it was 
 ~allowedLocation = Location3
 You head in the direction she indicated. Around you, her children watch you all the way to the edge of the mangroves.
 ->travel_main
+
+//she isn't actually introduced, we should probably work in something about her being our brothers mistress? probably?
