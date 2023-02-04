@@ -1,4 +1,4 @@
-LIST MainInventory = Mead, Bracteate, Feather, Laevateinn
+LIST MainInventory = Mead, Bracteate, Feather, Laevateinn, Draupnir, Lucet
 LIST AbilityInventory = (Body), (Mind), (Follower), (Luck)
 LIST DamageSeverity = (None), (Small), (Medium), (Large)
 VAR Body_stack = 0
@@ -36,24 +36,20 @@ INV_SET(AbilityInventory)
 ~temp removeItem = false
 ~temp removeFromStack = false
 ~temp addItem = false
-~temp displayName = variable
+~temp displayName = DisplayName(variable)
 ~temp result = amount
 ~temp stackableVar = false
 {variable:
 - Body:
-~displayName = "Hamr"
 ~result = h_alterStack(Body_stack, amount, 10)
 ~stackableVar = true
 - Mind:
-~displayName = "Hugr"
 ~result = h_alterStack(Mind_stack, amount, 10)
 ~stackableVar = true
 - Luck:
-~displayName = "Hamingja"
 ~result = h_alterStack(Luck_stack, amount, 10)
 ~stackableVar = true
 - Follower:
-~displayName = "Fylgja"
 ~result = h_alterStack(Follower_stack, amount, 10)
 ~stackableVar = true
 }
@@ -161,6 +157,10 @@ INV_SET(AbilityInventory)
 ~return "The Laevateinn"
 - Bracteate:
 ~return "Bracteate"
+- Draupnir:
+~return "Draupnir"
+- Lucet:
+~return "Hel's Lucet"
 }
 ~return variable
 
