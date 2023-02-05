@@ -68,45 +68,69 @@ The name is famililar to you but you cannot place it, and it doesn't bring with 
 
 He hands you a slab of meat, and for the first time you notice the difficulty in his movements, as though he too is burdened by some unbearable weight.
 
+{alterAbility(Body, 1)} The meat does you good: it feels like you haven't eaten in eons. He catches you looking at his tethers inbetween bites.
+
 "Ah, this?" He looks at his arm. Too sharp by half this one, he interprets your every expression as though your thoughts were written on your brow.
 
 "It is but a minor inconvenience." He assures you. The cloak slides back just enough for you to see the thin bindings that wrap around his arm, and across his chest, loops of some silken substance that bites painfully into his flesh. "I will be rid of it soon."
 
-"In fact." He fixes you with an enquiring stare. "Perhaps you can be of help to me...I notice you have a certain spear in your possession, and it may prove useful in loosening these bonds - just a little mind, they bite you see, and I am tired of the pain."
+"In fact." He fixes you with an enquiring stare.
+
+{wagered_laevateinn:
+"You have already helped me with that." He brings out the Laevateinn; the moment you lay eyes on the cursed thing you feel worse. "This will be able to help me with all my troubles." #image.fenrir
+
+"Now I could be greedy, like the Aesir, and demand some other boon from you instead, but I shan't." He smiles. "I suppose you seek another of your stones? Well, I know just where to find one."
+->success
+}
+{MainInventory?Laevateinn:
+"Perhaps you can be of help to me...I notice you have a certain spear in your possession, and it may prove useful in loosening these bonds - just a little mind, they bite you see, and I am tired of the pain."
+- else:
+"I believe you...or rather your lovely companion...might be of some help to me. I sense she's quite handy with her fingers, and I have no doubt she could help me loosen these bonds. Just a little mind, they bite you see, and I am tired of the pain."
+}
 
 You balk a bit at the suggestion. After all you don't know who bound him, or why.
-
 *[And in return...?] #image.player
 
--Fenrir laughs, a joyous sound. #image.fenrir
+- Fenrir laughs, a joyous sound. #image.fenrir
 
 "Oh, a man after my own heart! Well done! Yes, of course you must get something in return. Another wager if you will. Help me with my little problem, and I'll help you with yours."
 
 *["Mine...] You begin to query. #image.player
 
--"Yes. Yours." He says, and gestures into the depths of the well upon which he sits. "I believe another one of those rocks is down there. It's probably too heavy for you to lift alone - even with the help of your little...friend." He adds, eyes flashing once more to Nyrna. 
+- "Yes. Yours." He says, and gestures into the depths of the well upon which he sits. "I believe another one of those rocks is down there. It's probably too heavy for you to lift alone - even with the help of your little...friend." He adds, eyes flashing once more to Nyrna. 
 
 "But together, with my bonds loosened? Well, we should manage just fine."
 
-//Challenge challenge, outcome, you loosen his bonds and he snaps at you inadvertantly as you do so, then smiles in apology. Always, always smiling. 
+* [{RequireItem(Laevateinn)} Give him the mistletoe spear.]
+->success
+* [{RequireAbility(Follower, 3)} Let Nyrna help him.]
+"You know not what you ask." Nyrna mumbles, as she appears before the wolf. "...no biting, Fenrir. He may not remember you, but I do." #image.nyrna
+{alterAbility(Follower, -3)}
+->success
 
-"Sorry, it's just my nature. I am the wolf, the eater of worlds. Maybe I could have been something else once, something gentler, something truer. But they took that fate from me, and this is what remains." 
+=success
+As the bonds fall off, the wolf suddenly leaps out and snaps at you! You only just manage to avoid his jaw. As he draws back, you realize the bonds are not simply loosened, but entirely off. He is free. #image.none
 
-"Thank you for the favour, friend. I hope you find what you are looking for." 
+"Sorry, it's just my nature. I am the wolf, the eater of worlds. Maybe I could have been something else once, something gentler, something truer. But they took that fate from me, and this is what remains." #image.fenrir
 
-"The way out is through those cliffs over there, follow the path and you will come to a great forest. Go towards it, and you will find the way."
+"Thank you for the favour, friend. Now, let us retrieve this runestone of yours. Let none say I am not a wolf of my word."
 
+Together, you lift the runestone from the well. How it got there is another question, but it does not seem to have been there for long. #image.none
 
+"Now, I believe it is time I find my father." The wolf says. "We are past due a reunion."
 
-+ [Leave]
-->leave
+Nyrna shudders. #image.nyrna
+
+"The way out is through those cliffs over there, follow the path and you will come to a great forest. Go towards it, and you will find the way. I hope you find what you are looking for, friend." #image.fenrir
+
+->runestone
 
 =runestone
-You go to the runestone.
+You have eyes and ears for nothing but the runestone, and your coming oblivion. Water drips off it as you read.
 ->runestone_main->
-Cool.
+Not much left now, of you. Of the world. Of time.
+~allowedLocation=Location8
 ->leave
 
 =leave
-Time to go.
 ->travel_main

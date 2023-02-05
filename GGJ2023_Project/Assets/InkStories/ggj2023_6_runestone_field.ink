@@ -139,7 +139,7 @@ He takes the Vial, but with a measure of hesitation. As if he wished to tell you
 You mean to give him only a swig of the Mead, but he takes the whole thing. Of course.
 ~Mead_stack = 0
 - Feather:
-The moment the feather leaves your possession, you feel heavier. He look delighted.
+The moment the feather leaves your possession, you feel heavier. He look delighted; then he sniffs it, as if it might have some memory of a scent of its previous owner.
 }
 {alterItem(wageredItem, -1)}
 
