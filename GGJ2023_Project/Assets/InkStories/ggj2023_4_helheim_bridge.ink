@@ -46,6 +46,9 @@ She points at the gate behind her. "Best of luck." Between your eyes turning tow
 ->helheim_nagrind
 
 * [{RequireItem(Lucet)} "I found something of yours."] #image.player
+->lucet
+
+=lucet
 {alterItem(Lucet, -1)} {alterAbility(Luck, 3)}
 You hand her the lucet you found along the shores of Nastrond. She takes it from you, eyes widening.
 

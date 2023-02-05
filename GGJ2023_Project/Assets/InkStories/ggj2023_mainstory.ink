@@ -22,8 +22,8 @@ INCLUDE ggj2023_9_mimirs_well.ink
 }
 {UpdateInventory()}
 {Teleport(currentLocation)}
-{Teleport(Location4)}
-->helheim_bridge_main
+{Teleport(Location5)}
+->helheim_descent_main
 /*{debug:
 ->testItemAdding
 ~allowedLocation+=(Location1, Location2)
