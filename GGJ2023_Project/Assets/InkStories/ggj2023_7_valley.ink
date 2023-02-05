@@ -42,9 +42,9 @@ Together, you walk towards the village, through the open gates, and into a ghost
 
 "See, I told you it was a trap." Nyrna sounds almost smug about it. 
 
-You head towards the heart of the village, and there beside the well sits a familiar figure, eating a leg of freshly roasted boar. 
+You head towards the heart of the village, and there perched on the edge of a well sits a familiar figure, eating a leg of freshly roasted boar. 
 
-"We meet again!" He crows as make your approach, and this time his hood is down, and you can shee his face, and his wolfish smile.
+"We meet again!" He crows as make your approach, and this time his hood is down, and you can shee his face, and his wolfish smile. #image.fenrir
 
 Some niggling memory gnaws at you, something about a wolf - THE wolf. But if you once regarded him as friend or foe you cannot say. You decide to trust recent events. If we meant you harm he could have easily done so already.
 
@@ -52,22 +52,51 @@ Then again, what happened to the villagers?
 
 You share a loaded look with Nyrna, but say nothing. Nonetheless, the wolf seems to get the gist of your thoughts.
 
-"Ah, the village folk?" He waves the boar leg through the air in a casual dismissal of your fears. "I was hungry, so I came down to investigate the smell of their cooking, but they always run away when they see me approaching.
+"Ah, the village folk?" He waves the boar leg through the air in a casual dismissal of your fears. "I was hungry, so I came down to investigate the smell of their cooking, but they always run away when they see me approaching."
 
-The wolf shrugs. "Some people are just prejudiced, as I'm sure you know." He adds, looking you up and down with a glint in his eye.
+The wolf shrugs. 
 
-"It's Fenrir."Nyrna hisses quitely in your ear, batting at space around your sleeve. "FENRIR" She mouths, as though it were somehow urgent.
+"Some people are just prejudiced, as I'm sure you know." He adds, looking you up and down with a glint in his eye.
 
-The name is famililar to you but you cannot place it. 
+"It's Fenrir." Nyrna hisses quitely in your ear, batting at space around your sleeve. "FENRIR." She mouths silently, as though this somehow clarifies things.
 
-You suddenly notice Fenrir watching the space beside you with amusement. He can...see her? Interesting. //remove this if problematic
+The name is famililar to you but you cannot place it, and it doesn't bring with it any sense of alarm. You notice Fenrir watching the space beside you with amusement. He can see your folgja? Interesting. Though unsurprising given his familiarity with illusion magic. //remove this if problematic
+
+*[I was drawn here for a similar reason."] You say, gesturing to the remains of the boar over the fire pit. #image.player
+
+-"Ah, you were? Excellent then! Let us break bread together and be merry, and don't worry, I'll bring another boar to them later and leave it outside the fence. I always pay my debts." He clarifies, though this time there is a hint of steel behind his voice, as though he is refering to some other incident, some other debt to be repaid. #image.fenrir
+
+He hands you a slab of meat, and for the first time you notice the difficulty in his movements, as though he too is burdened by some unbearable weight.
+
+"Ah, this?" He looks at his arm. Too sharp by half this one, he interprets your every expression as though your thoughts were written on your brow.
+
+"It is but a minor inconvenience." He assures you. The cloak slides back just enough for you to see the thin bindings that wrap around his arm, and across his chest, loops of some silken substance that bites painfully into his flesh. "I will be rid of it soon."
+
+"In fact." He fixes you with an enquiring stare. "Perhaps you can be of help to me...I notice you have a certain spear in your possession, and it may prove useful in loosening these bonds - just a little mind, they bite you see, and I am tired of the pain."
+
+You balk a bit at the suggestion. After all you don't know who bound him, or why.
+
+*[And in return...?] #image.player
+
+-Fenrir laughs, a joyous sound. #image.fenrir
+
+"Oh, a man after my own heart! Well done! Yes, of course you must get something in return. Another wager if you will. Help me with my little problem, and I'll help you with yours."
+
+*["Mine...] You begin to query. #image.player
+
+-"Yes. Yours." He says, and gestures into the depths of the well upon which he sits. "I believe another one of those rocks is down there. It's probably too heavy for you to lift alone - even with the help of your little...friend." He adds, eyes flashing once more to Nyrna. 
+
+"But together, with my bonds loosened? Well, we should manage just fine."
+
+//Challenge challenge, outcome, you loosen his bonds and he snaps at you inadvertantly as you do so, then smiles in apology. Always, always smiling. 
+
+"Sorry, it's just my nature. I am the wolf, the eater of worlds. Maybe I could have been something else once, something gentler, something truer. But they took that fate from me, and this is what remains." 
+
+"Thank you for the favour, friend. I hope you find what you are looking for." 
+
+"The way out is through those cliffs over there, follow the path and you will come to a great forest. Go towards it, and you will find the way."
 
 
-
-
-//Maybe Fenrir could be here instead of in the woods, and you find him in the village centre, cleaning his teeth, the slender bonds of gleipnir wrapped around his limbs. He can walk, but his movements are all greatly hindered, as though burdened by a great weight. It's entirely possible that he just ate everyone who used to live here, though he denies it. "I was hungry, drawn in by the smell of the meat on the fire. But they run away when they see me coming, as though I were some sort of monster." --- something something help him out (I dont hink either of you should know each other at this point) or some sort of confrontation. Maybe you use Laevettein to loosen his bonds...even if just a little (if it is good at opening unbreakable locks like Nagrind that is), and he snaps at you inadvertantly, then smiles. "Sorry, it's just my nature. I am the wolf, the eater of worlds. Perhaps I could have been something else once, something gentler, something truer. But they took that fate from me, and this is what remains." "Thank you for the favour, friend. I hope you find what you are looking for." "The way out is through those cliffs over there, follow the path and you will come to a great forest. Go there, and you will find the way."
-
-//I mean, okay fine, I guess we are going with Fenrir. Will fix this later.
 
 + [Leave]
 ->leave
