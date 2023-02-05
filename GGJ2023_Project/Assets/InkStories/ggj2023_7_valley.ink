@@ -5,21 +5,26 @@ Vegetation returns, and you notice small blooms of wildflowers sprouting by the 
 
 The walls are built high and strong, but the gate lies open in welcome, and the mouthwatering scent of cooking drifts towards you on the gentle breeze.
 
-"Is that...laughter?" Nyrna asks, staring ahead. #image.nyrna
+"Is that a village? Here of all places?" Nyrna asks, staring ahead. #image.nyrna
 
 *[Nod.] #image.player
 
--"Children's laughter, by the sound of it. The land of the dead is full of strange wonders, is it not?"
+-"The land of the dead is full of strange wonders, is it not?" You had assumed the lands beyond Helheim would be abandoned, but it seems even here beyond death, life has found a way.
 
-"It could be a trap." She muses. #image.nyrna
+"It could be a trap." Nyrna muses. #image.nyrna
 
 #image.player
 *[You have grown more suspicious than me, Fylgja."]
+
 "Recent events have taught me to question everything. The more innocuous a thing seems, the more capable it is of hurting you." She grumbles.#image.nyrna
 
 *[It could be. But it is the only way forward.]
+
 "That's not true, we could skirt around it. Stick to the woods, avoid it entirely." #image.nyrna
 
+"An miss out on that delicious food? Let's be brave and chance it." You tell her. #image.player
+
+Even you are surprised by your sudden good humour.
 
 - "I sense a Runestone ahead, so we must go forward." #image.player
 
