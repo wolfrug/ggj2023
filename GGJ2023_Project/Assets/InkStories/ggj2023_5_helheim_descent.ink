@@ -18,7 +18,7 @@ Dusting her hands free of soil, she stands up and considers you. She is half you
 
 "Without incident?" She repeats the phrase, the words rolling over her tongue like strange fruit. #image.hel
 
-"Those aren't the words I'd choose. But certainly, I will let you pass. You have proven your worth by breaching the gate, and I will not stand in your way, or ask for any further pennance."
+"Those aren't the words I'd choose. But certainly, I will let you pass. You have proven your worth by breaching the gate, and I will not stand in your way, or ask for any further penance."
 
 "Instead, I bring you an offer. Will you consider it?" She regards you with one bright eye, and one black. Waiting, watchful.
 
@@ -40,7 +40,7 @@ Out of the the corner of your eye you see Nyrna turn aside, head in her hands as
 
 It would be so easy, to say yes.
 
-You can imagine Baldr walking through those streets, laughing with street vendours, and watching the gulls wheeling in the sky at the waters edge. What would you say to each other upon meeting? What apologies could you offer? 
+You can imagine Baldr walking through those streets, laughing with street vendors, and watching the gulls wheeling in the sky at the waters edge. What would you say to each other upon meeting? What apologies could you offer? 
 
 You could tell him it was all your fault. His death, the disintegration of the realms, everyone of the edge of war. You were too slow, too feeble, too much a coward. You could not stand up to his father and stop what was happening, even though you saw the telltale signs as plain as day. 
 
@@ -54,7 +54,7 @@ But you also know he wouldn't care about a single part of that. He would just sm
 
 Hel nods, as though she always expected you to say that. The warmth leaves her face and she turns away from you.
 
-"Then go. You may pass through the streets of my city, but all who you meet will turn away from you, for you do not belong you. I declare you outcast, nidlingr, vargr, unwanted, unremembered. Hurry to the docks, and a ferrymen will take you to your destination."
+"Then go. You may pass through the streets of my city, but all who you meet will turn away from you, for you do not belong here. I declare you outcast, nidlingr, vargr, unwanted, unremembered. Hurry to the docks, and a ferrymen will take you to your destination."
 
 "But do not tarry. Do not seek to linger. Do not turn aside from your path, no matter what you see, or hear. Or you will be trapped in eternal torment, and reach the ending you so desperately seek."
 
