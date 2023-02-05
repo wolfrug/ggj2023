@@ -211,7 +211,7 @@ INV_SET(AbilityInventory)
 {stack>0:
 ~temp lowerStat = RANDOM(0,1)>0
 {lowerStat:
-{alterAbility(Follower, -1)}
+{alterAbility(Follower, -number)}
 }
 ~return true
 }
