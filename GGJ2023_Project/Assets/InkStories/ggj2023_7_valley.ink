@@ -28,15 +28,44 @@ Even you are surprised by your sudden good humour.
 
 - "I sense a Runestone ahead, so we must go forward." #image.player
 
-"I can feel them now, can't you? Like tethers holding me to the ground."
+"I can feel them now, can't you? Like tethers holding me to the ground. You would think the burden would grow lighter, but I find it is the opposite. The fewer stones that remain, the heavier they feel."
+
+"Even my kness ache." You laugh. "But then, maybe I'm just getting old."
 
 Nyrna casts a silent look at your face, then turns away. If you didn't know her better you might think she was holding back tears.
 
-"The end draws near."She says. #image.nyrna
+"The end draws near." She says. #image.nyrna 
 
-Together, you walk towards the village.
+"Let us rest a little before continuing the journey."
 
-//SO, a couple of options here. Happy village folk greet you, show you the way to the stone, try to trick you into staying and eating their food like fey-folk "look how nice it is here, the woods beyond are horrible, there's nothing else out there but villains and bandits. You don't want to go there, etc." OR ghost town! Everything recently abandoned. Maybe Fenrir could be here instead of in the woods, and you find him in the village centre, cleaning his teeth, the slender bonds of gleipnir wrapped around his limbs. He can walk, but his movements are all greatly hindered, as though burdened by a great weight. It's entirely possible that he just ate everyone who used to live here, though he denies it. "I was hungry, drawn in by the smell of the meat on the fire. But they run away when they see me coming, as though I were some sort of monster." --- something something help him out (I dont hink either of you should know each other at this point) or some sort of confrontation. Maybe you use Laevettein to loosen his bonds...even if just a little (if it is good at opening unbreakable locks like Nagrind that is), and he snaps at you inadvertantly, then smiles. "Sorry, it's just my nature. I am the wolf, the eater of worlds. Perhaps I could have been something else once, something gentler, something truer. But they took that fate from me, and this is what remains." "Thank you for the favour, friend. I hope you find what you are looking for." "The way out is through those cliffs over there, follow the path and you will come to a great forest. Go there, and you will find the way."
+Together, you walk towards the village, through the open gates, and into a ghost town. Everything lies abandoned, as though the residents were there but moments before, and for some reason fled.
+
+"See, I told you it was a trap." Nyrna sounds almost smug about it. 
+
+You head towards the heart of the village, and there beside the well sits a familiar figure, eating a leg of freshly roasted boar. 
+
+"We meet again!" He crows as make your approach, and this time his hood is down, and you can shee his face, and his wolfish smile.
+
+Some niggling memory gnaws at you, something about a wolf - THE wolf. But if you once regarded him as friend or foe you cannot say. You decide to trust recent events. If we meant you harm he could have easily done so already.
+
+Then again, what happened to the villagers?
+
+You share a loaded look with Nyrna, but say nothing. Nonetheless, the wolf seems to get the gist of your thoughts.
+
+"Ah, the village folk?" He waves the boar leg through the air in a casual dismissal of your fears. "I was hungry, so I came down to investigate the smell of their cooking, but they always run away when they see me approaching.
+
+The wolf shrugs. "Some people are just prejudiced, as I'm sure you know." He adds, looking you up and down with a glint in his eye.
+
+"It's Fenrir."Nyrna hisses quitely in your ear, batting at space around your sleeve. "FENRIR" She mouths, as though it were somehow urgent.
+
+The name is famililar to you but you cannot place it. 
+
+You suddenly notice Fenrir watching the space beside you with amusement. He can...see her? Interesting. //remove this if problematic
+
+
+
+
+//Maybe Fenrir could be here instead of in the woods, and you find him in the village centre, cleaning his teeth, the slender bonds of gleipnir wrapped around his limbs. He can walk, but his movements are all greatly hindered, as though burdened by a great weight. It's entirely possible that he just ate everyone who used to live here, though he denies it. "I was hungry, drawn in by the smell of the meat on the fire. But they run away when they see me coming, as though I were some sort of monster." --- something something help him out (I dont hink either of you should know each other at this point) or some sort of confrontation. Maybe you use Laevettein to loosen his bonds...even if just a little (if it is good at opening unbreakable locks like Nagrind that is), and he snaps at you inadvertantly, then smiles. "Sorry, it's just my nature. I am the wolf, the eater of worlds. Perhaps I could have been something else once, something gentler, something truer. But they took that fate from me, and this is what remains." "Thank you for the favour, friend. I hope you find what you are looking for." "The way out is through those cliffs over there, follow the path and you will come to a great forest. Go there, and you will find the way."
 
 //I mean, okay fine, I guess we are going with Fenrir. Will fix this later.
 
