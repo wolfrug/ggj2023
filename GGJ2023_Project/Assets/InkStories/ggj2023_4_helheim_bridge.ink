@@ -45,6 +45,15 @@ She points at the gate behind her. "Best of luck." Between your eyes turning tow
 
 ->helheim_nagrind
 
+* [{RequireItem(Lucet)} "I found something of yours."] #image.player
+{alterItem(Lucet, -1)} {alterAbility(Luck, 3)}
+You hand her the lucet you found along the shores of Nastrond. She takes it from you, eyes widening.
+
+"I thought this lost. Nanna used to teach me how to weave back before..." She stops, her lips thin. #image.hel
+
+"Go, then, uncle. Pass through. But quickly." She waves her hand, and the gate Nagrind opens. You open your mouth to thank her, but she is already gone.
+->helheim_nagrind.runestone
+
 ==helheim_nagrind
 Nagrind, the famed gates of Helheim loom before you, spiky and austere. You think you can make out inscriptions on the barricade, black lettering that writhes before your eyes defying all attempts to read it - but you think you catch the meaning.
 
@@ -81,7 +90,7 @@ You clear your mind, or it is cleared for you. You walk, like a draugr, through 
 ->runestone
 
 =runestone
-On the other side of the gate, leaning amongst many of its kind, you find your runestone. As if waiting for you to pass the gate. You wipe it off with the slow movement of the dead.
+On the other side of the gate, leaning amongst many of its kind, you find your runestone. As if waiting for you to pass the gate. You wipe it clean from dust.
 ->runestone_main->
 Who is this person? Why do we care?
 ~allowedLocation=Location5
