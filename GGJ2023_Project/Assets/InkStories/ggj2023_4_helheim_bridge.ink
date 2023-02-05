@@ -26,6 +26,7 @@ Her face twists strangely, and she turns away from you, once more gazing down in
 "No time for niceties, Uncle. I'm afraid this isn't a family call, but a matter of life or death. And time is of the essence." //(there is a term for what I want to say here and I can't for the life of me remember it. Family call? Personal matter?)
 
 A CHALLENGE AWAITS.
+->helheim_nagrind
 
 ==helheim_nagrind
 Nagrind, the famed gates of Helheim loom before you, spiky and austere. You think you can make out inscriptions on the barricade, black lettering that writhes before your eyes defying all attempts to read it - but you think you catch the meaning.
@@ -46,9 +47,7 @@ And for better or worse, you are as yet one of the living.
 
 *[choicechoice]
 
-
-
-
+-
 
 
 + [Leave]

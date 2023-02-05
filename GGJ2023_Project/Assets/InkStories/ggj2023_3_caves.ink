@@ -167,6 +167,9 @@ You consider his question carefully. #image.player
  -Etc.
  
  //words, challenges, riddles, whatever. Is he sitting on a stone?
+ 
+ //Hvergelmir and Ginnungagap are also...something...to do? Maybe Loki's cave is right on the edge of one of them so we can combine things? Contemplate the void, vs contemplate the roiling cascade? Or Sigyn is at Ginnungagap - she finds the emptiness comforting. And Loki is closer to the falls? Maybe better?
+ 
 
 + [Leave]
 ->leave
