@@ -3,9 +3,9 @@ The Gjallarbru lies before you, an impossible arch over the roaring chasm that i
 
 A cloaked woman awaits you on the bridge, looking down at the icy waters as though deep in thought.
 
-"Perhaps she's guardian of this place." Nyrna says as you make your careful approach. "I've heard a fierce giantess stands guard upon the bridge before death's gate. #image.nyrna
+"Perhaps she's the guardian of this place." Nyrna says as you make your careful approach. "I've heard a fierce giantess stands guard upon the bridge before death's gate. #image.nyrna
 
-But there is something about the figure that gives you pause. Some strange familiarity.
+But there is something about the figure that gives you pause. Some strange familiarity...
 
 She turns to face you, and you stumble to a halt in shock.
 
@@ -17,15 +17,33 @@ Catching your expression, Hel smiles crookedly, the flesh on the unmarred half o
 
 "A small momento from your precious All-father. Though I suppose even you have fallen out with him now. How sad. I would weep, if I remembered how."
 
-*["Hel."] #image.hel
+*["Hel."] #image.player
 
--You say her name, unable to say anything else.
+-You say her name, somehow unable to say anything else.
 
-Her face twists strangely, and she turns away from you, once more gazing down into the waters of the Gjoll.
+Her face twists strangely, and she turns away from you, once more gazing down into the waters of the Gjoll.#image.hel
 
-"No time for niceties, Uncle. I'm afraid this isn't a family call, but a matter of life or death. And time is of the essence." //(there is a term for what I want to say here and I can't for the life of me remember it. Family call? Personal matter?)
+"No time for niceties, Uncle. I'm afraid this isn't a personal call, but rather a matter of life or death. And time is of the essence." 
 
-A CHALLENGE AWAITS.
+"You've been doing so well, leaving a swathe of destruction in your wake without a single thought to those left behind." She taps the side of her head. "You think you are all alone in this world. Some discarded broken thing. But there are still people in your life who know you, who remember how you used to be."
+
+"Even I am feeling the effects of your unravelling, a blurring at the edges of my recollection. Carry on, and soon I won't remember you at all. Even your face has grown unfamiliar. But we are family. Still." Her laugh is full of bitterness.
+
+*["Will you stand in my way?"] #image.player
+
+-A cold trickle of fear runs down your spine at the thought. If she will not let you pass, you aren't confident in your ability to best her. She always was the most fearsome of your brothers many children. It's why you loved her best.
+
+"Stop you? Could I? Is there enough yet remaning of the man you used to be to make it worth my while?" #image.Hel
+
+"Then perhaps I will. Yes, I will think on it a while."
+
+*["What of now? What will you have of me?"] #image.player
+
+"Oh, nothing too frightening. A simple transaction. You wish to gain access to my lands, but you do not belong here, Uncle. You must pay for your passage, or turn back." #image.hel
+
+
+//Hel challenge here, or does she leave you to think about it and getting through the gate is the challenge.
+
 ->helheim_nagrind
 
 ==helheim_nagrind
