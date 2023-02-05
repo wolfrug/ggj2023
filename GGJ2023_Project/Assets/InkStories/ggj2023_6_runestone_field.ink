@@ -37,7 +37,7 @@ The question now is where is the Runestone. You're sure you felt its presence he
 
 "He searches for a rock! In a field of rocks!" The stranger laughs, a rough sound compared to the silver of his speaking voice, almost a growl. #image.fenrir_cloaked
 
-*[Do you mock me, sir?] ?#image.player
+*[Do you mock me, sir?] #image.player
 
 - "Mock you? Oh no! I would never. Let us just say that I enjoy the futility of your plight." He pauses to consider you. #image.fenrir_cloaked 
 

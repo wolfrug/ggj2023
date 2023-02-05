@@ -22,8 +22,9 @@ INCLUDE ggj2023_9_mimirs_well.ink
 }
 {UpdateInventory()}
 {Teleport(currentLocation)}
-{Teleport(Location6)}
-->runestone_field_main
+{Teleport(Location7)}
+//{alterItem(Draupnir, 1)}
+->valley_main
 /*{debug:
 ->testItemAdding
 ~allowedLocation+=(Location1, Location2)
