@@ -5,9 +5,9 @@ A cloaked woman awaits you on the bridge, looking down at the icy waters as thou
 
 "Perhaps she's the guardian of this place." Nyrna says as you make your careful approach. "I've heard a fierce giantess stands guard upon the bridge before death's gate. #image.nyrna
 
-But there is something about the figure that gives you pause. Some strange familiarity...
+But there is something about the figure that gives you pause. Some strange familiarity...#image.none
 
-She turns to face you, and you stumble to a halt in shock.
+She turns to face you, and you stumble to a halt in shock.#image.hel
 
 It has been a long time since you last saw your niece, and you find her much changed from the bright, carefree girl you used to play with in the fields outside Breidablik.
 

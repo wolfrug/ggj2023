@@ -75,11 +75,11 @@ You do not realize what the table-top is before you spot Nyrna's face, peering t
 
 - (options)
 * (mind) [{RequireAbility(Mind, 5)} Distract her with stories in order to get close.]
-{AbilityCheck(Mind, 10): You attempt to distract her with stories of the ring-mail covered tables in Valhalla, pretending neutral interest in the rock. She seems amused, and does not stop you. ->runestone(mind)|You attempt to think of something, anything, one might say about tables, but come up short. The woman takes a bite out of some raw meat, looking at you. {AbilityDamage(Mind, Small)}}
+{AbilityCheck(Mind, 10): You attempt to distract her with stories of the ring-mail covered tables in Valhalla, pretending neutral interest in the rock. She seems amused, and does not stop you. ->runestone("mind")|You attempt to think of something, anything, one might say about tables, but come up short. The woman takes a bite out of some raw meat, looking at you. {AbilityDamage(Mind, Small)}}
 ->options
 * (body) [{RequireAbility(Body, 6)} It is your runestone, and she stole it. Take it back.]
 "Yes." You say, and step towards it. At once, she stands between you and it; she suddenly seems...larger. #image.player
-{AbilityCheck(Body, 12): You wrestle like only two giants can. The house shudders and shakes, and her children cower in the corners. In the end, you are victorious. Never during the fight did you exchange a single word.->runestone(body)|You wrestle like only two giants can, the house shuddering and shaking. Her children cheer on her from the sides, grinning and hollering. In the end, she has the upper hand.}
+{AbilityCheck(Body, 12): You wrestle like only two giants can. The house shudders and shakes, and her children cower in the corners. In the end, you are victorious. Never during the fight did you exchange a single word.->runestone("body")|You wrestle like only two giants can, the house shuddering and shaking. Her children cheer on her from the sides, grinning and hollering. In the end, she has the upper hand.}
 
 After you yield, she simply nods at you, then returns to her meat.->failConvince
 
@@ -87,7 +87,7 @@ After you yield, she simply nods at you, then returns to her meat.->failConvince
 {AbilityCheck(Luck, 14):
 "It is my saga, on that runestone. I want it." #image.player
 
-She looks at you without expression for a moment, then shrugs. When you approach it, she does not stop you.->runestone(luck)
+She looks at you without expression for a moment, then shrugs. When you approach it, she does not stop you.->runestone("luck")
 - else:
 You hesitate, unsure suddenly of how wise this is. "I came here for the runestone, yes." You say, finally. #image.player
 "And how does that concern me?" She replies. You do not know how to answer that. #image.angrboda
@@ -100,7 +100,7 @@ You catch Nyrna's eye behind the jotunn-woman's back. You do not need to speak t
 A moment later, something falls in the back yard. The woman sits up, surprised, and after giving you a suspicious look goes out to investigate. #image.angrboda
 
 Once she is gone, you go up to the runestone. #image.none
-->runestone(follower)
+->runestone("follower")
 }
 ->failConvince // This should never happen
 
@@ -119,23 +119,23 @@ She scoffs. "And if my children no longer have a table to eat from when you are 
 
 She turns away from you, clearly disgusted. "Take it then, whatever your reasons may be."
  - 
- ->runestone(failConvince)
+ ->runestone("fail")
 
 
 =runestone(method)
 You go to the runestone, wiping away dust and crumbs to read the text underneath. #image.none
 ->runestone_main->
 
-{method==follower: The woman returns from outside to find her table gone. She does not look too surprised, however.}
+{method=="follower": The woman returns from outside to find her table gone. She does not look too surprised, however.}
 
 "Unfortunate. It was a sturdy enough table." Angrboda shrugs, then looks at you. "I assume you are headed for the caves? I will tell my children not to bother you." #image.angrboda
 
 "Thank you." #image.player
 
-{method==failConvince:
+{method=="fail":
 You get the feeling she is doing you this favour for no other reason than wanting you as far away from her as possible, as soon as possible.
 }
-{method==body:
+{method=="body":
 She smiles at you. "Not many have bested me in a wrestling match. I am of mind to reward you." #image.angrboda
 
 She produces from a small pouch a single feather. You recognize it at once. She hands it to you. {alterItem(Feather, 1)}

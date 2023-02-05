@@ -216,10 +216,10 @@ She presses something into your hands. "I have held on to this for too long. Per
 Sigyn pours the acid into the depths, then points. "Good luck, brother-in-law. And do not come back."
 }
 
-And she is gone. Before you stands the Ginnungagap.
+And she is gone. Before you stands the Ginnungagap. #image.none
 
 * [{RequireItem(Feather)} You have a feather from the cloak of Freyja to aid you.]
-The feather alone is not enough to make you fly, but with it in hand, you jump and skip from root to ice-floe, until you make it across. {alterAbility(Mind, 1)} {alterAbility(Body, 1)}{alterAbility(Luck,1)}{alterAbility(Follower, 1)}
+The feather alone is not enough to make you fly, but with it in hand, you jump and skip from root to ice-floe, until you make it across. The feather, its magic spent, turns to dust. {alterItem(Feather, -1)} {alterAbility(Mind, 1)} {alterAbility(Body, 1)}{alterAbility(Luck,1)}{alterAbility(Follower, 1)}
 ->leave
 * [You have no choice but to try to make it.]
 {AbilityCheck(Body, 10):
