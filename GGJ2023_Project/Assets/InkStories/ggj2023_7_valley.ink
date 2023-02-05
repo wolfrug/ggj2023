@@ -109,7 +109,7 @@ You balk a bit at the suggestion. After all you don't know who bound him, or why
 ->success
 
 =success
-As the bonds fall off, the wolf suddenly leaps out and snaps at you! You only just manage to avoid his jaw. As he draws back, you realize the bonds are not simply loosened, but entirely off. He is free. #image.none
+As the bonds fall off, the wolf suddenly leaps out and snaps at you! You only just manage to avoid his bite, although a tooth does draw blood. As he draws back, you realize the bonds are not simply loosened, but entirely off. He is free. #image.none
 
 "Sorry, it's just my nature. I am the wolf, the eater of worlds. Maybe I could have been something else once, something gentler, something truer. But they took that fate from me, and this is what remains." #image.fenrir
 

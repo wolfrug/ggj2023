@@ -107,7 +107,7 @@ He looks at you from under his cloak, and then produces a slender little amulet 
 
 "I accept." He says. I sense a smile. "...and for the game itself?"
 
-* [{RequireAbility(Body, 5)} A game of töga-honk.]
+* [{RequireAbility(Body, 5)} A game of toga-honk.]
 The game of tug-of-war is one everyone plays, from children to adults. You each pull at one end of a knotted rope, and whoever pulls the other over the line first wins.
 {AbilityCheck(Body, GetStack(Body)): You are equally matched, but you sense certain movements are constricting your mysterious opponent more than others. You use this to your advantage, and soon the field is yours.->success|You are equally matched; but he has tricks up his sleeve you never saw on the fields of Asgard. One such finally pulls you over the line.->fail(wageredItem)}
 * [{RequireAbility(Mind, 5)} A game of Hnefatafl.]
