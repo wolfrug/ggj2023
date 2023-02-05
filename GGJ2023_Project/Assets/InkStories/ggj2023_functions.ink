@@ -6,6 +6,9 @@ VAR Mind_stack = 0
 VAR Follower_stack = 0
 VAR Luck_stack = 0
 VAR Mead_stack = 0
+
+VAR wagered_laevateinn = false
+
 VAR debug = true
 
 ===function UpdateInventory()
