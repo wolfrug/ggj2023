@@ -3,9 +3,9 @@ The passageway down is smooth, a perfect circle of darkness descending into the 
 
 Nyrna stand at the breach and lifts her hand high, her palm cupped around a small flame.
 
-"Ready when you are Oath-breaker." She says. #image.nyrna
+"Ready when you are Oath-breaker." She says. #image.nyrna 
 
-The illumination from her small flame scatters light across the walls, reflecting in the facets of black rock embedded there like shards of ancient glass. #image.none
+The illumination from her small flame scatters light across the walls, reflecting in the facets of black rock embedded there like shards of ancient glass. 
 
 *[...]
 
@@ -128,7 +128,48 @@ You open your mouth to say something, <i>anything</i> more, but Nyrna steps towa
 
 =lokis_cave
 
-LOKI WUZ HERE.
+You find your brother bound and broken, arms and ankles bound in iron chains that extend to three great stones of binding. The cave smells of old blood, iron, and fear. 
+
+Faithful Sigyn has rigged a makeshift shelter to catch and divert the acidic droplets falling from the cavern roof, but you can see the etches it has left in the stone, and the places where it has burned your brothers flesh away.
+
+You have never seen him like this, and he will never see again.
+
+#image.loki
+Loki's eyes are covered by a piece of ragged cloth, but you can see the edges of the scars underneath. He sits quietly upon a great slab of rock, knees pressed to his chest, feet bare and ringed with scars where the manacles have left their mark over the many days of his imprisonment.
+
+He tilts his head to one side as you approach, listening to your footfalls.
+
+"A new visitor! My, my, today <i>is</i> an auspicious day. Tell me your name stranger, it has been a long time since I last laid eyes upon a new face."
+
+Loki laughs, catching his own mistake,  "I suppose it will be longer still before I lay eyes on one again. But my ears still work fine, rest assured."
+
+"A name?" You say the words out loud before you can catch yourself. "Call me Nameless then, if you must, or Nidingr, or Vargr. All are equally appropriate."
+
+"Then you are in find company my friend. We are outcasts both, though I still have my name to call on." Again you catch that birdlike tilt to his head as he considers you from afar. 
+
+"There is something familiar about your voice stranger, perhaps we knew each other once?"
+
+*["Once, perhaps."] #image.player
+
+"But no longer?" Loki asks. "What caused this sad parting of ways?" #image.Loki
+
+You consider his question carefully. #image.player
+
+**["Fate."] You say at last. 
+
+"A man's fate can be altered, even unravelled if he has the will to do such a thing." #image.Loki
+
+"Are you sure we cannot be friends? I may be bound to this cave,' Loki lifts his arms, heavy chains rattling against stone by way of demonstration. 'but there are ways around that." 
+
+*["You are mistaken."]
+ You offer up the lie so easily, and he accepts it. Your sharp brother who never let a single thing get past him, just allows your lie to rest between you without challenge.
+ 
+ -Etc.
+ 
+ //words, challenges, riddles, whatever. Is he sitting on a stone?
+ 
+ //Hvergelmir and Ginnungagap are also...something...to do? Maybe Loki's cave is right on the edge of one of them so we can combine things? Contemplate the void, vs contemplate the roiling cascade? Or Sigyn is at Ginnungagap - she finds the emptiness comforting. And Loki is closer to the falls? Maybe better?
+ 
 
 + [Leave]
 ->leave
