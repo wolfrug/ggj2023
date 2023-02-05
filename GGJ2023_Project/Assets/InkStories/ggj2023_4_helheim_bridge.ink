@@ -33,7 +33,7 @@ Her face twists strangely, and she turns away from you, once more gazing down in
 
 -A cold trickle of fear runs down your spine at the thought. If she will not let you pass, you aren't confident in your ability to best her. She always was the most fearsome of your brothers many children. It's why you loved her best.
 
-"Stop you? Could I? Is there enough yet remaning of the man you used to be to make it worth my while?" #image.Hel
+"Stop you? Could I? Is there enough yet remaining of the man you used to be to make it worth my while?" #image.hel
 
 "Then perhaps I will. Yes, I will think on it a while."
 
@@ -41,8 +41,7 @@ Her face twists strangely, and she turns away from you, once more gazing down in
 
 "Oh, nothing too frightening. A simple transaction. You wish to gain access to my lands, but you do not belong here, Uncle. You must pay for your passage, or turn back." #image.hel
 
-
-//Hel challenge here, or does she leave you to think about it and getting through the gate is the challenge.
+She points at the gate behind her. "Best of luck." Between your eyes turning towards the gate and back to where she was, she disappears. This is her queendom, and she makes the rules. To Nagrind, then.
 
 ->helheim_nagrind
 
@@ -55,28 +54,38 @@ Nagrind, the famed gates of Helheim loom before you, spiky and austere. You thin
 
 And for better or worse, you are as yet one of the living.
 
-"What now?" Nyrna asks you with a long suffering air.#image.nyrna
-"Have you finally run out of bright ideas."
+"What now?" Nyrna asks you with a long suffering air. "Have you finally run out of bright ideas?" #image.nyrna
  
-  #image.player
-*["There's always a way."] 
-
-"It's just a matter of time."
-
-*[choicechoice]
-
--
-
-
-+ [Leave]
-->leave
+ - (options)
+* {GetStack(Body)<1} [{RequireAbility(Body, 0)} "For better or worse, I might as well be dead."]
+You walk towards the gate, your body barely held together. The gate creaks open.
+->runestone
+* {GetStack(Mind)<1} [{RequireAbility(Mind, 0)} "My thoughts are all but gone, either way."]
+As you walk towards the gate, your mind an empty shell of what it once was, the gates creak open.
+->runestone
+* [{RequireAbility(Body, 1)} It requires a sacrifice, that is all.]
+{AbilityCheck(Body, 20):
+{AbilityDamage(Body, Medium)} 
+- else:
+{AbilityDamage(Body, Large)} 
+}
+You walk towards the gate, and as you do, you feel your life drain from you, the closer you get. You are not sure if you are among the living or the dead any more when you pass through.
+->runestone
+* [{RequireAbility(Mind, 1)} Death of body, death of mind. It is the same.]
+{AbilityCheck(Mind, 20):
+{AbilityDamage(Mind, Medium)} 
+- else:
+{AbilityDamage(Mind, Large)} 
+}
+You clear your mind, or it is cleared for you. You walk, like a draugr, through the gate, that creaks open for you.
+->runestone
 
 =runestone
-You go to the runestone.
+On the other side of the gate, leaning amongst many of its kind, you find your runestone. As if waiting for you to pass the gate. You wipe it off with the slow movement of the dead.
 ->runestone_main->
-Cool.
+Who is this person? Why do we care?
+~allowedLocation=Location5
 ->leave
 
 =leave
-Time to go.
 ->travel_main

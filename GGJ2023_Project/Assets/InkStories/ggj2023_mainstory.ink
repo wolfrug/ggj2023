@@ -22,7 +22,8 @@ INCLUDE ggj2023_9_mimirs_well.ink
 }
 {UpdateInventory()}
 {Teleport(currentLocation)}
-//->caves_main.leave
+{Teleport(Location4)}
+->helheim_bridge_main
 /*{debug:
 ->testItemAdding
 ~allowedLocation+=(Location1, Location2)
