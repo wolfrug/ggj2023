@@ -1,7 +1,7 @@
 ==runestone_main
 ~runestones_seen++
 // Will go through the runestones in order here, from 1-10
-SHOW_RUNESTONE(true) [ETCHED INTO THE RUNESTONE]<br><br><>#clearText
+SHOW_RUNESTONE(true) [ETCHED INTO THE RUNESTONE]<br><br><>#clearText #image.none
 {->memory1->|->memory2->|->memory3->|->memory4->|->memory5->|->memory6->|->memory7->|->memory8->|->memory9->|->memory10->}
 + [Erase runes.]
 #eraseRunes
