@@ -1,9 +1,7 @@
 ==runestone_field_main
 The ferryman leaves you on a desolate strip of beach, and you struggle up the slope and find that the hills beyond are strewn with iron-grey stones, rising from the ground like the shattered teeth of giants.
 
-{GetStack(Body)<3: It may be biting, but it is no longer the city of the Dead itself. You steel yourself against the wind, feeling more alive already. {alterAbility(Body, 1)}}
-
-The wind is cold and biting, tugging at your cloak as you struggle up the barren pathway.
+The wind is cold and biting, tugging at your cloak as you struggle up the barren pathway. {GetStack(Body)<3: It may be biting, but it is no longer the city of the Dead itself. You steel yourself against the wind, feeling more alive already. {alterAbility(Body, 1)}}
 
 It takes you a while to realise they are all Runestones, or they were, once. You pause to read what runes remains, but the shapes have long since been obliterated by erosion and moss.
 
@@ -102,8 +100,10 @@ He looks at you from under his cloak, and then produces a slender little amulet 
 ~wageredItem = Mead
 * [{RequireItem(Laevateinn)} This cursed stick.]
 ~wageredItem = Laevateinn
+* [{RequireItem(Lucet)} A lucet belonging to Hel.]
+~wageredItem = Lucet
 
-- You show him {DisplayName(wageredItem)} and for once, he has no words.
+- You show him {DisplayName(wageredItem)}. He looks impressed.
 
 "I accept." He says. I sense a smile. "...and for the game itself?"
 
@@ -140,6 +140,8 @@ You mean to give him only a swig of the Mead, but he takes the whole thing. Of c
 ~Mead_stack = 0
 - Feather:
 The moment the feather leaves your possession, you feel heavier. He look delighted; then he sniffs it, as if it might have some memory of a scent of its previous owner.
+- Lucet:
+You give him the lucet, wondering why you never returned it to your niece. Was it just to lose it in a wager? Your opponent seems pleased with it, however.
 }
 {alterItem(wageredItem, -1)}
 

@@ -102,6 +102,7 @@ You balk a bit at the suggestion. After all you don't know who bound him, or why
 "But together, with my bonds loosened? Well, we should manage just fine."
 
 * [{RequireItem(Laevateinn)} Give him the mistletoe spear.]
+{alterItem(Laevateinn, -1)}
 ->success
 * [{RequireAbility(Follower, 3)} Let Nyrna help him.]
 "You know not what you ask." Nyrna mumbles, as she appears before the wolf. "...no biting, Fenrir. He may not remember you, but I do." #image.nyrna

@@ -8,6 +8,8 @@ VAR Luck_stack = 0
 VAR Mead_stack = 0
 
 VAR wagered_laevateinn = false
+VAR runestones_seen = 0
+VAR mimirs_points = 0
 
 VAR debug = true
 

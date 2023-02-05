@@ -22,22 +22,6 @@ INCLUDE ggj2023_9_mimirs_well.ink
 }
 {UpdateInventory()}
 {Teleport(currentLocation)}
-{Teleport(Location8)}
-//{alterItem(Draupnir, 1)}
-->forest_main
-/*{debug:
-->testItemAdding
-~allowedLocation+=(Location1, Location2)
-"Quite something." You say. #image.player
-"Isn't it?" Nyrna agrees. #image.nyrna
-"What're we talking about?" #image.angrboda
-"Yeah, tell us." #image.sigyn
-"I can't see shit." #image.loki
-"Haha, wanna party?" #image.hel
-"Always, sister.", #image.fenrir
-"Nevermind." #image.none
-}
-*/
 ->currentLocationKnot
 
 ==setStartingStats

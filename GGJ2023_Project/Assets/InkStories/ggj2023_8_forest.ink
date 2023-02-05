@@ -85,10 +85,12 @@ Nyrna frowns. "Helblindi? But how? No-one even remembers him. No-one understands
 * {CHOICE_COUNT() < 3} ["I have a plan. We have a plan. I know we do."]
 {alterAbility(Follower, -1)}
 "What in the nine realms are you talking about?" Nyrna cries out. "You can barely remember your own name, Byleistr."
+~mimirs_points++
 ->sisyphus
 * {CHOICE_COUNT() < 3} ["I loved him."]
 {alterAbility(Follower, -1)}
 "And what do you think I do? Is <i>my</i> love worth nothing?" Nyrna cries out. You say nothing, because there is nothing you can say.
+~mimirs_points++
 ->sisyphus
 
 

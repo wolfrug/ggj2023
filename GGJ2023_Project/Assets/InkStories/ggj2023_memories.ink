@@ -1,10 +1,11 @@
 ==runestone_main
+~runestones_seen++
 // Will go through the runestones in order here, from 1-10
 SHOW_RUNESTONE(true) [ETCHED INTO THE RUNESTONE]<br><br><>#clearText
 {->memory1->|->memory2->|->memory3->|->memory4->|->memory5->|->memory6->|->memory7->|->memory8->|->memory9->|->memory10->}
 + [Erase runes.]
 #eraseRunes
-You destroy the memory. You now have the sole copy of it.
+You destroy the memory. {~The world is all the more poorer for its loss.|The details are already slipping away.|None will remember this tale.|It makes no sound.|Like blowing out a candle at the end of the day.|Your reality becomes slightly narrower.|One step closer to the end.|No sagas will be sung about you.|It is forever lost to time.|Goodbye.}
 ++ [SHOW_RUNESTONE(false)Leave]
 You leave, and the empty runestone crumbles to dust.
 ->->
