@@ -107,6 +107,8 @@ public class BetterTooltip : MonoBehaviour, IPointerExitHandler, IPointerEnterHa
     }
     void OnDestroy () {
         // Destroy the tooltip object too
-        Destroy (m_parentCanvas.gameObject);
+        if (m_parentCanvas != null) {
+            Destroy (m_parentCanvas.gameObject);
+        }
     }
 }

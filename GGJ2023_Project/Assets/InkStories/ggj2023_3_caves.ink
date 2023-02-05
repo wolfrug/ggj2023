@@ -145,12 +145,12 @@ Loki laughs, catching his own mistake,  "I suppose it will be longer still befor
 
 "A name?" You say the words out loud before you can catch yourself. "Call me Nameless then, if you must, or Nidingr, or Vargr. All are equally appropriate."
 
-"Then you are in find company my friend. We are outcasts both, though I still have my name to call on." Again you catch that birdlike tilt to his head as he considers you from afar. 
+"Then you are in fine company my friend. We are outcasts both, though I still have my name to call on." Again you catch that birdlike tilt to his head as he considers you from afar. 
 
 "There is something familiar about your voice stranger, perhaps we knew each other once?"
 
 *["Once, perhaps."] #image.player
-
+{alterAbility(Luck, 1)}
 "But no longer?" Loki asks. "What caused this sad parting of ways?" #image.Loki
 
 You consider his question carefully. #image.player
@@ -162,24 +162,96 @@ You consider his question carefully. #image.player
 "Are you sure we cannot be friends? I may be bound to this cave,' Loki lifts his arms, heavy chains rattling against stone by way of demonstration. 'but there are ways around that." 
 
 *["You are mistaken."]
+{alterAbility(Mind, 1)}
  You offer up the lie so easily, and he accepts it. Your sharp brother who never let a single thing get past him, just allows your lie to rest between you without challenge.
  
- -Etc.
+ -That is when you see the runestone, glowing, nestled softly in an alcove behind Loki.
  
- //words, challenges, riddles, whatever. Is he sitting on a stone?
- 
- //Hvergelmir and Ginnungagap are also...something...to do? Maybe Loki's cave is right on the edge of one of them so we can combine things? Contemplate the void, vs contemplate the roiling cascade? Or Sigyn is at Ginnungagap - she finds the emptiness comforting. And Loki is closer to the falls? Maybe better?
- 
+ "So what brings you here then, stranger?" #image.loki
 
-+ [Leave]
-->leave
+You do not answer, instead you hurry towards the stone. He shifts towards you, and you realize suddenly that behind his glib words and bravado lies fear. He is afraid you are another torment, sent by the Aesir.
 
-=runestone
-You go to the runestone.
+You have to answer him, somehow.
+~temp succeeded = false
+* [{RequireAbility(Mind, 5)} "I am not your enemy."] #image.player
+{AbilityCheck(Mind, 10):
+You tell him that, and he believes you. You watch as he relaxes into his seat.
+~succeeded = true
+-else:
+He does not seem to believe you, and as you pass him by he tenses even more. {alterAbility(Mind, -1)}
+}
+ * [{RequireAbility(Body,4)} Make your footsteps silent.] #image.player
+ {AbilityCheck(Body, 8):
+ You move, silent like a cat, past him. He does not seem to notice.
+ ~succeeded=true
+ -else:
+ Your foot hits a rock, and Loki suddenly cowers, raising his hands as best he can. Your heart splinters, but you do not stop. {alterAbility(Body, -1)}
+ }
+ * ["I am not here to torment you."] #image.player
+ {AbilityCheck(Luck, 10):
+ Somehow, he seems to believe you, despite it all. He relaxes as you pass him by.
+ ~succeeded=true
+ "So they all say." Loki mumbles. He tenses as you pass him by. {alterAbility(Luck, -1)}
+ }
+- ->runestone(succeeded)
+
+=runestone(succeeded)
+You are glad your brother cannot see what you are doing, or read the words before you.
 ->runestone_main->
-Cool.
+Once the runestone is gone, you turn back to your brother - only to find him no longer alone. Sigyn is there, emptying the contraption above his head that keeps the poison from him. #image.sigyn
+
+"You will want to leave. Go to Hel's fortress, I imagine?" She says, holding the bowl of acid. "Follow me then."
+
+You follow her, away from Loki's cave, where he moans softly in terror as the drops fall around him. #image.loki
+
+The cave opens up to a view of the void. Ginnungagap, the void that was before the world, the void that will be there when the world ends once more. Hoar and rimefrost cover it, and the roots of the world-tree reach into it, creating a makeshift bridge across. #image.none
+
+{succeeded:
+She turns to you after pouring the acid into the depths. "Thank you, for not frightening my husband. His torments are quite enough on their own." #image.sigyn
+
+She presses something into your hands. "I have held on to this for too long. Perhaps you will know what to do with it."
+{alterItem(Vial, 1)}
+"Good luck, brother-in-law. May you find what you came for."
+-else:
+Sigyn pours the acid into the depths, then points. "Good luck, brother-in-law. And do not come back."
+}
+
+And she is gone. Before you stands the Ginnungagap.
+
+* [{RequireItem(Feather)} You have a feather from the cloak of Freyja to aid you.]
+The feather alone is not enough to make you fly, but with it in hand, you jump and skip from root to ice-floe, until you make it across. {alterAbility(Mind, 1)} {alterAbility(Body, 1)}{alterAbility(Luck,1)}{alterAbility(Follower, 1)}
+->leave
+* [You have no choice but to try to make it.]
+{AbilityCheck(Body, 10):
+You are beaten by ice-cold winds from the void, jump across gaps over an eternal fall, slip on frost that has been here since Ymir was yet whole. But you make it.
+->leave
+- else:
+You make it far enough that you could not turn around, and then you slip and fall. You tumble towards the void. {AbilityDamage(Body, Medium)}
+{AbilityCheck(Mind, 10):
+You refuse to panic. You grab hold of a dead root and stop yourself from going over. For a moment you hang there, letting your breath calm, and then you pull yourself back up.
+->leave
+- else:
+All you can think of is falling endlessly. What happens to those who fall into the Ginnungagap? Do they die? Or do they spend eternity in darkness? {AbilityDamage(Mind, Medium)}
+{AbilityCheck(Luck, 10):
+You see the branch in the dark at the last moment, hidden under the lip of the ice. You aim your feet at it, hit, and then push with all your might. Suddenly your fall has become a jump, a mighty jump, mighty enough to bridge the void itself. You shout defiance at the Norns as you land on solid ground again.
+->leave
+- else:
+As you hurtle towards the void, your quest lost, you suddenly see a glow before you. Nyrna. {AbilityDamage(Luck, Medium)}
+->leaveWithHelp
+}
+}
+}
+
+=leaveWithHelp
+{AbilityCheck(Follower, 1):
+Nyrna lifts you up as you fall, and for a moment you are gently rocked in the arms of Fate. She deposits you on the opposite bank.
+"Why not ask for my help from the start, you fool?" Nyrna curses. #image.nyrna
+}
+She pretends not to be affected by it, but you can tell rescuing you took a lot out of her. {alterAbility(Follower, -1)}
 ->leave
 
 =leave
-Time to go.
-->travel_main
+~allowedLocation=Location4
+* [Go to Hel.]
+{Move(Location4)}
+->travel_main.location4

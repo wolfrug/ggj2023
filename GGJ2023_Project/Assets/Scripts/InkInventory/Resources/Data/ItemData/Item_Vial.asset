@@ -17,5 +17,5 @@ MonoBehaviour:
   m_image: {fileID: 21300000, guid: 8f638559682d7b64ea87775fb340ed25, type: 3}
   m_description: A vial of tears, collected before they might prove to Hel that all
     the world did in fact weep for Baldr.
-  m_maxStack: 3
+  m_maxStack: 1
   m_prefab: {fileID: 3485106938093570340, guid: 9a40f6a39f5adda40b36174627e6b657, type: 3}

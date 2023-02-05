@@ -115,11 +115,15 @@ Even the manner of your entrance to this place is a perversion of the rites of p
 Black cliffs loom ahead. You catch a glimpse of the world tree above, stretching across an impossible expanse of nothingness. For a moment you fear the incomprehensible reality of it will drive you mad, but then the merciful fog descends once more and you are able to look away.
 
 You walk blindly for what feels like hours. When your steps falter Nyrna ranges ahead of you to find the way, but she cannot wander far.
-
-Then at last.
+{AbilityCheck(Luck, 10):
+You stop, waiting for Nyrna, when you notice something, washed up on the shore. A little wooden thing, barely discernible among the driftwood. Something compels you to crouch down and pick it up.
+{alterItem(Lucet, 1)}
+- else:
+You let your eyes rest on the strand while you wait for Nyrna; at all the debris of those who died and washed up here, never rescued into the halls of Valhalla. The items they had with them were useless, discarded. Like you are.
+}
 
 #image.Nyrna
-"I think I've found something." She tells you, rushing back from her latest ranging.
+"I think I've found something." Nyrna appears in the fog, rushing back from her latest ranging.
 
 You gather your strength and stumble after her, and suddenly the fog thins. 
 
